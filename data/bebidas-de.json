@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nombre": "Klassischer Mojito",
+    "descripcion": "Weißer Rum, frische Limette, Minze, Rohrzucker und Sprudelwasser",
+    "precio": 8,
+    "moneda": "€",
+    "imagen": "assets/bebidas/mojito.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Cuba Libre",
+    "descripcion": "Gereifter kubanischer Rum, Coca-Cola und ein Spritzer Limette",
+    "precio": 7,
+    "moneda": "€",
+    "imagen": "assets/bebidas/cuba-libre.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Mango-Daiquiri",
+    "descripcion": "Weißer Rum, frische Mango, Limette und Zucker. Als Frozen serviert",
+    "precio": 9,
+    "moneda": "€",
+    "imagen": "assets/bebidas/daiquiri-mango.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Piña Colada",
+    "descripcion": "Rum, Kokosnusscreme und frisch zerdrückte Ananas",
+    "precio": 9,
+    "moneda": "€",
+    "imagen": "assets/bebidas/pina-colada.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Guaven-Saft",
+    "descripcion": "Frische tropische Guave, ohne Zuckerzusatz",
+    "precio": 4,
+    "moneda": "€",
+    "imagen": "assets/bebidas/guayaba.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Kokoswasser",
+    "descripcion": "Frische Kokosnuss, auf Bestellung geöffnet, mit Strohhalm serviert",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "assets/bebidas/coco.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 7,
+    "nombre": "Cristal Bier",
+    "descripcion": "Kubanisches Lagerbier, 33cl Flasche, eiskalt",
+    "precio": 4,
+    "moneda": "€",
+    "imagen": "assets/bebidas/cristal.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 8,
+    "nombre": "Tamarinden-Punsch",
+    "descripcion": "Tamarinde, Ingwer, Rohrzucker und ein Hauch Rum (auch alkoholfrei erhältlich)",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/bebidas/tamarindo.jpg",
+    "recomendado": false,
+    "agotado": true,
+    "activo": true
+  }
+]

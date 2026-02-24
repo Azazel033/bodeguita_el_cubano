@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Caribeño</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="centered">
+
+<header class="menu-header">
+  <img src="assets/logo.png" class="logo" alt="Logo del restaurante">
+
+  <div class="lang-selector">
+    <button class="lang-btn active" data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES"> ES</button>
+    <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN"> EN</button>
+    <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE"> DE</button>
+  </div>
+</header>
+
+<main class="categories-container">
+  <a class="category-card" id="card-bebidas">
+    <span class="emoji">🍹</span>
+    <h2 id="label-bebidas">Bebidas Tropicales</h2>
+    <p id="desc-bebidas">Refrescos, cócteles y jugos naturales</p>
+  </a>
+
+  <a class="category-card" id="card-comidas">
+    <span class="emoji">🍽️</span>
+    <h2 id="label-comidas">Especialidades Cubanas</h2>
+    <p id="desc-comidas">Platos típicos y delicias locales</p>
+  </a>
+
+  <a class="category-card" id="card-postres">
+    <span class="emoji">🍰</span>
+    <h2 id="label-postres">Postres de la Casa</h2>
+    <p id="desc-postres">Dulces irresistibles y tradicionales</p>
+  </a>
+</main>
+
+<script>
+  const translations = {
+    es: {
+      bebidas: { label: "Bebidas Tropicales", desc: "Refrescos, cócteles y jugos naturales" },
+      comidas: { label: "Especialidades Cubanas", desc: "Platos típicos y delicias locales" },
+      postres: { label: "Postres de la Casa", desc: "Dulces irresistibles y tradicionales" }
+    },
+    en: {
+      bebidas: { label: "Tropical Drinks", desc: "Soft drinks, cocktails and natural juices" },
+      comidas: { label: "Cuban Specialties", desc: "Traditional dishes and local delicacies" },
+      postres: { label: "House Desserts", desc: "Irresistible and traditional sweets" }
+    },
+    de: {
+      bebidas: { label: "Tropische Getränke", desc: "Erfrischungsgetränke, Cocktails und Säfte" },
+      comidas: { label: "Kubanische Spezialitäten", desc: "Traditionelle Gerichte und lokale Köstlichkeiten" },
+      postres: { label: "Hausdesserts", desc: "Unwiderstehliche und traditionelle Süßigkeiten" }
+    }
+  };
+
+  let currentLang = localStorage.getItem("lang") || "es";
+
+  function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+
+    const t = translations[lang];
+
+    document.getElementById("label-bebidas").textContent = t.bebidas.label;
+    document.getElementById("desc-bebidas").textContent = t.bebidas.desc;
+    document.getElementById("label-comidas").textContent = t.comidas.label;
+    document.getElementById("desc-comidas").textContent = t.comidas.desc;
+    document.getElementById("label-postres").textContent = t.postres.label;
+    document.getElementById("desc-postres").textContent = t.postres.desc;
+
+    document.getElementById("card-bebidas").href = `categoria.html?tipo=bebidas&lang=${lang}`;
+    document.getElementById("card-comidas").href = `categoria.html?tipo=comidas&lang=${lang}`;
+    document.getElementById("card-postres").href = `categoria.html?tipo=postres&lang=${lang}`;
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+  }
+
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+  });
+
+  applyLang(currentLang);
+</script>
+
+</body>
+</html>

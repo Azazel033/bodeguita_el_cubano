@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nombre": "Flan de Ron y Coco",
+    "descripcion": "Flan cremoso de leche de coco con caramelo de ron añejo. Receta de la abuela",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/postres/flan-coco.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Arroz con Leche Cubano",
+    "descripcion": "Arroz cremoso infusionado con canela, anís estrellado y ralladura de limón. Servido frío",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "assets/postres/arroz-leche.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Churros con Chocolate Caribeño",
+    "descripcion": "Churros crujientes con chocolate negro a la taza con guindilla y canela",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/postres/churros.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Tarta de Guayaba y Queso",
+    "descripcion": "Base de galleta, crema de queso y coulis de guayaba tropical. La combinación perfecta del Caribe",
+    "precio": 7,
+    "moneda": "€",
+    "imagen": "assets/postres/tarta-guayaba.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Helado de Maracuyá",
+    "descripcion": "Helado artesanal de maracuyá con semillas de fruta de la pasión y menta fresca",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "assets/postres/helado-maracuya.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Buñuelos de Viento",
+    "descripcion": "Buñuelos de yuca y malanga fritos, con almíbar de anís y miel de caña",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/postres/bunuelos.jpg",
+    "recomendado": false,
+    "agotado": true,
+    "activo": true
+  }
+]

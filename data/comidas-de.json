@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ropa Vieja",
+    "descripcion": "Zerzupftes Rindfleisch in Sofrito aus Tomaten, Paprika und Kreuzkümmel. Mit weißem Reis und gebratenem Kochbananen",
+    "precio": 14,
+    "moneda": "€",
+    "imagen": "assets/comidas/ropa-vieja.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Spanferkel vom Spieß",
+    "descripcion": "In Mojo criollo aus Bitterorange und Knoblauch mariniertes Schwein, langsam gegart. Mit Yuca und Moros y Cristianos",
+    "precio": 16,
+    "moneda": "€",
+    "imagen": "assets/comidas/lechon.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Kubanisches Picadillo",
+    "descripcion": "Gewürztes Hackfleisch mit Oliven, Kapern, Rosinen und Tomate. Mit Reis und schwarzen Bohnen",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "assets/comidas/picadillo.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Knoblauch-Garnelen",
+    "descripcion": "In Olivenöl, Knoblauch, Chili und einem Schuss Rum gebratene Garnelen. Mit weißem Reis",
+    "precio": 17,
+    "moneda": "€",
+    "imagen": "assets/comidas/camarones.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Tostones mit Pulled Pork",
+    "descripcion": "Zweifach frittierte grüne Kochbanane, außen knusprig, innen zart. Mit zerzupftem Schweinefleisch und Mojo",
+    "precio": 10,
+    "moneda": "€",
+    "imagen": "assets/comidas/tostones.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Moros y Cristianos",
+    "descripcion": "Schwarzer Reis mit schwarzen Bohnen, Lorbeer, Kreuzkümmel und Sofrito. Die klassische kubanische Beilage",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/comidas/moros.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 7,
+    "nombre": "Karibisches Ceviche",
+    "descripcion": "Frischer Wolfsbarsch in Tigermilch mariniert, mit Kokosflocken, Mango und Koriander",
+    "precio": 13,
+    "moneda": "€",
+    "imagen": "assets/comidas/ceviche.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 8,
+    "nombre": "Gegrillter Karibik-Hummer",
+    "descripcion": "Halber Karibik-Hummer gegrillt mit Kräuterbutter und Limette. Tagespreis",
+    "precio": 28,
+    "moneda": "€",
+    "imagen": "assets/comidas/langosta.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nombre": "Rum-Kokos-Flan",
+    "descripcion": "Cremiger Kokosmilch-Flan mit gereiftem Rum-Karamell. Omas Rezept",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/postres/flan-coco.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Kubanischer Milchreis",
+    "descripcion": "Cremiger Reis mit Zimt, Sternanis und Zitronenschale. Kalt serviert",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "assets/postres/arroz-leche.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Churros mit karibischer Trinkschokolade",
+    "descripcion": "Knusprige Churros mit dunkler Trinkschokolade mit Chili und Zimt",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/postres/churros.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Guaven-Frischkäse-Tarte",
+    "descripcion": "Keksboden, Frischkäsecreme und tropisches Guaven-Coulis. Die perfekte karibische Kombination",
+    "precio": 7,
+    "moneda": "€",
+    "imagen": "assets/postres/tarta-guayaba.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Maracuja-Eis",
+    "descripcion": "Handgemachtes Maracuja-Eis mit Passionsfruchtkerne und frischer Minze",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "assets/postres/helado-maracuya.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Yuca-Krapfen",
+    "descripcion": "Frittierte Yuca- und Malanga-Krapfen mit Anissirup und Zuckerrohhonig",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/postres/bunuelos.jpg",
+    "recomendado": false,
+    "agotado": true,
+    "activo": true
+  }
+]

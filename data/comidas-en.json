@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ropa Vieja",
+    "descripcion": "Shredded beef stewed in a sofrito of tomato, pepper and cumin. Served with white rice and fried plantain",
+    "precio": 14,
+    "moneda": "€",
+    "imagen": "assets/comidas/ropa-vieja.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Roast Suckling Pig",
+    "descripcion": "Pork marinated in sour orange and garlic mojo criollo, slow-roasted. With yuca and moros y cristianos",
+    "precio": 16,
+    "moneda": "€",
+    "imagen": "assets/comidas/lechon.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Cuban Picadillo",
+    "descripcion": "Spiced ground beef with olives, capers, raisins and tomato. Served with rice and black beans",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "assets/comidas/picadillo.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Garlic Prawns",
+    "descripcion": "Prawns sautéed in olive oil, garlic, chilli and a splash of rum. With white rice",
+    "precio": 17,
+    "moneda": "€",
+    "imagen": "assets/comidas/camarones.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Tostones with Pulled Pork",
+    "descripcion": "Twice-fried green plantain, crispy outside, tender inside. With shredded pork and mojo sauce",
+    "precio": 10,
+    "moneda": "€",
+    "imagen": "assets/comidas/tostones.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Moros y Cristianos",
+    "descripcion": "Black rice cooked with black beans, bay leaf, cumin and sofrito. The classic Cuban side dish",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/comidas/moros.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 7,
+    "nombre": "Caribbean Ceviche",
+    "descripcion": "Fresh sea bass marinated in tiger's milk, shredded coconut, mango and coriander",
+    "precio": 13,
+    "moneda": "€",
+    "imagen": "assets/comidas/ceviche.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 8,
+    "nombre": "Grilled Caribbean Lobster",
+    "descripcion": "Half Caribbean lobster grilled with herb butter and lime. Market price",
+    "precio": 28,
+    "moneda": "€",
+    "imagen": "assets/comidas/langosta.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  }
+]

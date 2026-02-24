@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nombre": "Classic Mojito",
+    "descripcion": "White rum, fresh lime, spearmint, cane sugar and sparkling water",
+    "precio": 8,
+    "moneda": "€",
+    "imagen": "assets/bebidas/mojito.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Cuba Libre",
+    "descripcion": "Aged Cuban rum, Coca-Cola and a squeeze of lime",
+    "precio": 7,
+    "moneda": "€",
+    "imagen": "assets/bebidas/cuba-libre.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Mango Daiquiri",
+    "descripcion": "White rum, fresh mango, lime and sugar. Served frozen",
+    "precio": 9,
+    "moneda": "€",
+    "imagen": "assets/bebidas/daiquiri-mango.jpg",
+    "recomendado": true,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Piña Colada",
+    "descripcion": "Rum, coconut cream and freshly crushed pineapple",
+    "precio": 9,
+    "moneda": "€",
+    "imagen": "assets/bebidas/pina-colada.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Guava Juice",
+    "descripcion": "Fresh tropical guava, no added sugar",
+    "precio": 4,
+    "moneda": "€",
+    "imagen": "assets/bebidas/guayaba.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Coconut Water",
+    "descripcion": "Fresh coconut opened to order, served with a straw",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "assets/bebidas/coco.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 7,
+    "nombre": "Cristal Beer",
+    "descripcion": "Cuban lager beer, 33cl bottle, ice cold",
+    "precio": 4,
+    "moneda": "€",
+    "imagen": "assets/bebidas/cristal.jpg",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 8,
+    "nombre": "Tamarind Punch",
+    "descripcion": "Tamarind, ginger, cane sugar and a hint of rum (non-alcoholic available)",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "assets/bebidas/tamarindo.jpg",
+    "recomendado": false,
+    "agotado": true,
+    "activo": true
+  }
+]
