@@ -45,12 +45,7 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbo
 // ---- RENDER ----
 if (tipo) {
   const l = labels[lang] || labels.es;
-  const tituloImg = document.getElementById("titulo-categoria");
-  const navTexto = document.getElementById(`nav-texto-${tipo}`);
-  if (navTexto) {
-    tituloImg.src = navTexto.src.replace('.png', '-blanco.png');
-    tituloImg.alt = navTexto.alt;
-  }
+  document.getElementById("titulo-categoria").textContent = l.titulos[tipo] || tipo;
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);

@@ -2,18 +2,18 @@
   {
     "id": 1,
     "nombre": "Mojito Clásico",
-    "descripcion": "Ron blanco, lima fresca, hierbabuena, azúcar de caña y agua con gas",
+    "descripcion": "Ron",
     "precio": 8,
     "moneda": "€",
-    "imagen": "assets/bebidas/mojito.jpg",
-    "recomendado": true,
+    "imagen": "assets/bebidas/daiquiri.jpg",
+    "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 2,
     "nombre": "Cuba Libre",
-    "descripcion": "Ron añejo cubano, Coca-Cola y un toque de lima",
+    "descripcion": "Ron",
     "precio": 7,
     "moneda": "€",
     "imagen": "assets/bebidas/cuba-libre.jpg",
@@ -24,18 +24,18 @@
   {
     "id": 3,
     "nombre": "Daiquiri de Mango",
-    "descripcion": "Ron blanco, mango natural, lima y azúcar. Servido frozen",
+    "descripcion": "Ron",
     "precio": 9,
     "moneda": "€",
     "imagen": "assets/bebidas/daiquiri-mango.jpg",
-    "recomendado": true,
+    "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 4,
     "nombre": "Piña Colada",
-    "descripcion": "Ron, crema de coco y piña natural triturada",
+    "descripcion": "Ron",
     "precio": 9,
     "moneda": "€",
     "imagen": "assets/bebidas/pina-colada.jpg",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "nombre": "Jugo de Guayaba",
-    "descripcion": "Guayaba tropical fresca, sin azúcar añadida",
+    "descripcion": "Ron",
     "precio": 4,
     "moneda": "€",
     "imagen": "assets/bebidas/guayaba.jpg",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "nombre": "Agua de Coco",
-    "descripcion": "Coco fresco abierto en el momento, servido con pajita",
+    "descripcion": "Ron",
     "precio": 5,
     "moneda": "€",
     "imagen": "assets/bebidas/coco.jpg",
@@ -68,7 +68,7 @@
   {
     "id": 7,
     "nombre": "Cerveza Cristal",
-    "descripcion": "Cerveza cubana rubia, botella 33cl, bien fría",
+    "descripcion": "Ron",
     "precio": 4,
     "moneda": "€",
     "imagen": "assets/bebidas/cristal.jpg",
@@ -79,12 +79,12 @@
   {
     "id": 8,
     "nombre": "Ponche de Tamarindo",
-    "descripcion": "Tamarindo, jengibre, azúcar de caña y un toque de ron (sin alcohol disponible)",
+    "descripcion": "Ron",
     "precio": 6,
     "moneda": "€",
-    "imagen": "assets/bebidas/tamarindo.jpg",
+    "imagen": "assets/bebidas/daiquiri.jpg",
     "recomendado": false,
-    "agotado": true,
+    "agotado": false,
     "activo": true
   }
 ]

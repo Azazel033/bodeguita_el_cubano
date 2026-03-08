@@ -5,7 +5,7 @@
     "descripcion": "Weißer Rum, frische Limette, Minze, Rohrzucker und Sprudelwasser",
     "precio": 8,
     "moneda": "€",
-    "imagen": "assets/bebidas/mojito.jpg",
+    "imagen": "assets/bebidas/daiquiri.jpg",
     "recomendado": true,
     "agotado": false,
     "activo": true

@@ -5,7 +5,7 @@
     "descripcion": "Shredded beef stewed in a sofrito of tomato, pepper and cumin. Served with white rice and fried plantain",
     "precio": 14,
     "moneda": "€",
-    "imagen": "assets/comidas/ropa-vieja.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": true,
     "agotado": false,
     "activo": true

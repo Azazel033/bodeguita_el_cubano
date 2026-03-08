@@ -5,7 +5,7 @@
     "descripcion": "Carne de res deshilachada guisada con sofrito de tomate, pimiento y comino. Acompañada de arroz blanco y plátano macho frito",
     "precio": 14,
     "moneda": "€",
-    "imagen": "assets/comidas/ropa-vieja.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": true,
     "agotado": false,
     "activo": true
@@ -16,7 +16,7 @@
     "descripcion": "Cerdo marinado en mojo criollo de naranja agria y ajo, asado lentamente. Con yuca y moros y cristianos",
     "precio": 16,
     "moneda": "€",
-    "imagen": "assets/comidas/lechon.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": true,
     "agotado": false,
     "activo": true
@@ -27,7 +27,7 @@
     "descripcion": "Carne picada con aceitunas, alcaparras, pasas y tomate. Servido con arroz y frijoles negros",
     "precio": 12,
     "moneda": "€",
-    "imagen": "assets/comidas/picadillo.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -38,7 +38,7 @@
     "descripcion": "Gambas salteadas en aceite de oliva, ajo, guindilla y un toque de ron. Con arroz blanco",
     "precio": 17,
     "moneda": "€",
-    "imagen": "assets/comidas/camarones.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -49,7 +49,7 @@
     "descripcion": "Plátano verde frito dos veces, crujiente por fuera, tierno por dentro. Con cerdo desmechado y mojo",
     "precio": 10,
     "moneda": "€",
-    "imagen": "assets/comidas/tostones.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -60,7 +60,7 @@
     "descripcion": "Arroz negro guisado con frijoles negros, laurel, comino y sofrito. El acompañamiento clásico cubano",
     "precio": 6,
     "moneda": "€",
-    "imagen": "assets/comidas/moros.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -71,7 +71,7 @@
     "descripcion": "Corvina fresca marinada en leche de tigre, coco rallado, mango y cilantro",
     "precio": 13,
     "moneda": "€",
-    "imagen": "assets/comidas/ceviche.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -82,7 +82,7 @@
     "descripcion": "Media langosta del Caribe a la parrilla con mantequilla de hierbas y lima. Precio según mercado",
     "precio": 28,
     "moneda": "€",
-    "imagen": "assets/comidas/langosta.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -93,7 +93,7 @@
     "descripcion": "Carne 200g, queso, bacon y patatas",
     "precio": 12,
     "moneda": "€",
-    "imagen": "assets/comidas/hamburguesa.jpg",
+    "imagen": "assets/comidas/placeholder-comida.jpg",
     "recomendado": true,
     "agotado": false,
     "activo": true

@@ -5,7 +5,7 @@
     "descripcion": "White rum, fresh lime, spearmint, cane sugar and sparkling water",
     "precio": 8,
     "moneda": "€",
-    "imagen": "assets/bebidas/mojito.jpg",
+     "imagen": "assets/bebidas/daiquiri.jpg",
     "recomendado": true,
     "agotado": false,
     "activo": true
