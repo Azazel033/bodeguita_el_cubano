@@ -7,28 +7,47 @@
 <link rel="stylesheet" href="css/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="has-fixed-header">
 
-<header class="menu-header">
-  <img src="assets/logo.png" class="logo" alt="Logo del restaurante">
+<header class="menu-header site-header">
+  <div class="header-inner">
+    <img src="assets/logo.png" class="logo" alt="Logo del restaurante">
 
-  <a id="back-btn" href="index.html" class="back-btn">⬅ Volver</a>
-  <div class="lang-selector">
-    <button class="lang-btn active" data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES"> ES</button>
-    <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN"> EN</button>
-    <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE"> DE</button>
+    <a id="back-btn" href="index.html" class="back-btn">⬅ Volver</a>
+
+    <div class="lang-selector">
+      <button class="lang-btn active" data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES"> ES</button>
+      <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN"> EN</button>
+      <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE"> DE</button>
+    </div>
+
+    <nav class="cat-nav">
+      <a class="category-card" id="nav-bebidas" href="categoria.html?tipo=bebidas">
+        <img src="assets/icono bebidas.png" alt="Bebidas">
+        <img class="texto-cat" id="nav-texto-bebidas" src="assets/texto bebida-es.png" alt="Bebidas">
+      </a>
+      <a class="category-card" id="nav-comidas" href="categoria.html?tipo=comidas">
+        <img src="assets/icono comida.png" alt="Comidas">
+        <img class="texto-cat" id="nav-texto-comidas" src="assets/texto comida-es.png" alt="Comidas">
+      </a>
+      <a class="category-card" id="nav-postres" href="categoria.html?tipo=postres">
+        <span class="emoji">🍰</span>
+        <img class="texto-cat" id="nav-texto-postres" src="assets/texto postre-es.png" alt="Postres">
+      </a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <h1 id="titulo-categoria"></h1>
+<main class="main-with-header">
+  <img id="titulo-categoria" src="" alt="" style="max-width:450px; height:auto; margin: 10px auto 0; display:block;">
   <div id="menu-container"></div>
 </main>
 
 <script src="js/app.js"></script>
 <script>
-  // Sincronizar idioma guardado con los botones
   const savedLang = localStorage.getItem("lang") || "es";
+  const currentTipo = new URLSearchParams(window.location.search).get("tipo");
+
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === savedLang);
     btn.addEventListener("click", () => {
@@ -38,6 +57,29 @@
       window.location.search = params.toString();
     });
   });
+
+  function updateCatNav(lang) {
+    document.getElementById("nav-texto-bebidas").src = `assets/texto bebida-${lang}.png`;
+    document.getElementById("nav-texto-comidas").src = `assets/texto comida-${lang}.png`;
+    document.getElementById("nav-texto-postres").src = `assets/texto postre-${lang}.png`;
+    document.getElementById("nav-bebidas").href = `categoria.html?tipo=bebidas&lang=${lang}`;
+    document.getElementById("nav-comidas").href = `categoria.html?tipo=comidas&lang=${lang}`;
+    document.getElementById("nav-postres").href = `categoria.html?tipo=postres&lang=${lang}`;
+
+    // Sincronizar imagen del título con la categoría activa
+    if (currentTipo) {
+      const navTexto = document.getElementById(`nav-texto-${currentTipo}`);
+      const tituloImg = document.getElementById("titulo-categoria");
+      if (navTexto && tituloImg) tituloImg.src = navTexto.src.replace('.png', '-blanco.png');
+    }
+  }
+
+  if (currentTipo) {
+    const activeCard = document.getElementById(`nav-${currentTipo}`);
+    if (activeCard) activeCard.classList.add("cat-active");
+  }
+
+  updateCatNav(savedLang);
 </script>
 
 </body>

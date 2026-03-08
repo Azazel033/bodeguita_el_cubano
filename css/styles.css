@@ -5,11 +5,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: url('../assets/fondo.jpg') center center / cover fixed no-repeat;
   color: #2b2b2b;
+  height: 100vh;
+  overflow: hidden; /* el scroll lo hace el main, no el body */
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 /* ---- CONTENEDOR CARTA ---- */
@@ -45,7 +47,8 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   letter-spacing: 3px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
   text-transform: uppercase;
@@ -105,9 +108,9 @@ h1 {
 
 .descripcion {
   margin: 4px 0 0 0;
-  font-size: 18px;
+  font-size: 9pt;
   color: black;
-  line-height: 1.5;
+  line-height: 1.0;
 }
 
 /* ---- IMAGEN ---- */
@@ -144,7 +147,7 @@ h1 {
 
 .badge.recomendado {
   display: inline-block;
-  background: #ff6b35;
+  background: #ac2a21;
   color: white;
   font-size: 10px;
   padding: 3px 9px;
@@ -181,6 +184,10 @@ h1 {
   width: 100%;
 }
 
+#menu-container .menu-card:first-child {
+  margin-top: 0;
+}
+
 /* ---- HEADER LOGO + IDIOMA ---- */
 
 .menu-header {
@@ -203,7 +210,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
   width: 100%;
   max-width: 900px;
 }
@@ -211,38 +218,44 @@ h1 {
 .category-card {
   background: rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   text-align: center;
-  padding: 30px 20px;
-  flex: 1 1 250px;
-  max-width: 280px;
+  padding: 15px 12px;
+  flex: 1 1 120px;
+  max-width: 160px;
+  min-width: 100px;
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
 }
 
 .category-card .emoji {
-  font-size: 50px;
+  font-size: 30px;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
+}
+
+.category-card img {
+  max-width: 100%;
+  height: auto;
 }
 
 .category-card h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin: 10px 0 5px 0;
+  font-size: 14px;
+  margin: 6px 0 3px 0;
   color: #fff;
   text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .category-card p {
-  font-size: 14px;
+  font-size: 11px;
   color: rgba(255,255,255,0.9);
   margin: 0;
 }
@@ -405,6 +418,163 @@ header {
   }
 
   .category-card {
-    max-width: 100%;
+    flex: 1 1 100px;
+    max-width: 48%;
+  }
+}
+/* ---- NAV CATEGORIAS (dentro de categoria.html) ---- */
+
+.cat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.cat-nav .category-card {
+  flex: 1 1 80px;
+  max-width: 130px;
+  opacity: 0.75;
+}
+
+.cat-nav .category-card:hover,
+.cat-nav .category-card.cat-active {
+  opacity: 1;
+  box-shadow: 0 0 0 3px white, 0 6px 20px rgba(0,0,0,0.3);
+  transform: scale(1.18) translateY(-2px);
+}
+
+.texto-cat {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 4px auto 0;
+}
+
+
+/* ---- HEADER FIJO (categoria.html) ---- */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  padding: 10px 16px 8px;
+  pointer-events: none;
+}
+
+/* La capsula roja centrada con el contenido */
+.site-header.menu-header {
+  gap: 0;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+.site-header .header-inner {
+  pointer-events: all;
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 10px 24px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 608px;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+.site-header .logo {
+  max-width: 250px;
+  margin-bottom: 0;
+}
+
+.site-header .back-btn {
+  margin: 0;
+  font-size: 13px;
+}
+
+.site-header .lang-selector {
+  margin-top: 0;
+  gap: 5px;
+}
+
+.site-header .lang-btn {
+  font-size: 13px;
+  padding: 4px 10px;
+}
+
+.site-header .lang-btn img {
+  width: 12px;
+  height: 8px;
+}
+
+.site-header .cat-nav {
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.site-header .category-card {
+  padding: 5px 7px;
+  border-radius: 10px;
+  flex: 1 1 65px;
+  max-width: 90px;
+  background: rgba(255,255,255,0.35);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.site-header .category-card .emoji {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.site-header .category-card img:first-child {
+  height: 28px;
+  width: auto;
+}
+
+.site-header .texto-cat {
+  max-height: 26px;
+  width: auto;
+}
+
+/* Empuja el main para que no quede bajo el header */
+.main-with-header {
+  position: fixed;
+  top: 340px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  padding: 20px 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main-with-header::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main-with-header {
+    top: 360px;
+  }
+
+  .site-header .logo {
+    max-width: 120px;
+  }
+
+  .site-header .header-inner {
+    width: 95vw;
   }
 }
