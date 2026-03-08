@@ -559,7 +559,7 @@ header {
 
 @media (max-width: 768px) {
   .main-with-header {
-    top: 360px;
+    top: 280px;
     padding-bottom: max(80px, env(safe-area-inset-bottom, 100px));
   }
 
