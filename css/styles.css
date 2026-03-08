@@ -580,3 +580,23 @@ header {
   transform: scale(1.15);
   opacity: 1;
 }
+
+/* Dirección */
+.direccion {
+  color: white;
+  font-size: 9pt;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 0 20px 20px;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* En móvil el index necesita scroll */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+}
