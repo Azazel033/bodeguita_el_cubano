@@ -581,7 +581,7 @@ header {
   opacity: 1;
 }
 
-/* Dirección */
+
 .direccion {
   color: white;
   font-size: 9pt;
@@ -592,11 +592,115 @@ header {
   opacity: 0.85;
 }
 
-/* En móvil el index necesita scroll */
+
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
     height: auto;
     min-height: 100vh;
+  }
+}
+
+.bebidas-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 14px 10px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.bebidas-index-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  min-width: 64px;
+}
+
+.bebidas-index-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.bebidas-index-item img {
+  max-width: 70px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.bebidas-index-item span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #0f4c5c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* ================================================================
+   BEBIDAS — SECCIONES
+   ================================================================ */
+
+.bebidas-seccion {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.bebidas-seccion-header {
+  display: block;
+  width: 55%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 14px;
+  object-fit: contain;
+}
+
+.bebidas-seccion-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.bebidas-seccion-cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0;
+}
+
+/* scroll-margin para que el header fijo no tape el título de sección */
+.bebidas-seccion {
+  scroll-margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .bebidas-index-item img {
+    max-width: 56px;
+    max-height: 34px;
+  }
+
+  .bebidas-seccion-header {
+    width: 65%;
   }
 }
