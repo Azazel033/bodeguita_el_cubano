@@ -23,6 +23,11 @@ body::before {
   z-index: 0;
 }
 
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* ---- CONTENEDOR CARTA ---- */
 
 main {
@@ -527,13 +532,12 @@ header {
 
 .main-with-header {
   position: fixed;
-  top: 220px;
+  top: var(--header-h, 215px);
   bottom: 0;
   left: 0;
   right: 0;
   overflow-y: auto;
-  padding: 20px 20px 40px;
-  padding-bottom: max(40px, env(safe-area-inset-bottom, 80px));
+  padding: 5px 20px max(40px, env(safe-area-inset-bottom, 80px));
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -548,7 +552,7 @@ header {
 
 @media (max-width: 768px) {
   .main-with-header {
-    top: 280px;
+    top: var(--header-h, 270px);
     padding-bottom: max(80px, env(safe-area-inset-bottom, 100px));
   }
 
@@ -590,7 +594,7 @@ header {
   opacity: 1;
 }
 
-
+/* Dirección */
 .direccion {
   color: white;
   font-size: 9pt;
@@ -601,7 +605,7 @@ header {
   opacity: 0.85;
 }
 
-
+/* En móvil el index necesita scroll */
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
@@ -609,19 +613,25 @@ header {
     min-height: 100vh;
   }
 }
+/* ================================================================
+   BEBIDAS — ÍNDICE DE SUBCATEGORÍAS
+   ================================================================ */
 
 .bebidas-index {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto 30px;
-  padding: 14px 10px;
-  background: rgba(255, 255, 255, 0.65);
+  padding: 12px 8px;
+  background: rgba(255,255,255,0.15);
   border-radius: 16px;
+  backdrop-filter: blur(4px);
   border: 1px solid rgba(255,255,255,0.25);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .bebidas-index-item {
@@ -661,9 +671,6 @@ header {
   text-align: center;
 }
 
-/* ================================================================
-   BEBIDAS — SECCIONES
-   ================================================================ */
 
 .bebidas-seccion {
   width: 100%;
@@ -698,7 +705,6 @@ header {
   gap: 0;
 }
 
-/* scroll-margin para que el header fijo no tape el título de sección */
 .bebidas-seccion {
   scroll-margin-top: 20px;
 }

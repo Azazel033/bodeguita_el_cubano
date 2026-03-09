@@ -90,5 +90,17 @@
   updateCatNav(savedLang);
 </script>
 
+
+<script>
+  // Mide el header y actualiza --header-h para que el main quede 5px por debajo
+  function updateHeaderHeight() {
+    const h = document.querySelector('.site-header');
+    if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+  }
+  updateHeaderHeight();
+  window.addEventListener('resize', updateHeaderHeight);
+  // Re-medir tras cargar imágenes del header (por si cambian el alto)
+  window.addEventListener('load', updateHeaderHeight);
+</script>
 </body>
 </html>
