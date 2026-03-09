@@ -9,7 +9,7 @@
     "clasificacion": "cocktails",
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "activo": false
   },
   {
     "id": 2,
