@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Mojito Clásico",
-    "descripcion": "Ron blanco, lima fresca, hierbabuena, azúcar de caña y agua con gas",
-    "precio": 8,
-    "moneda": "€",
-    "imagen": "assets/bebidas/daiquiri.jpg",
-    "clasificacion": "cocktails",
-    "recomendado": false,
-    "agotado": false,
-    "activo": false
-  },
-  {
     "id": 2,
     "nombre": "Cuba Libre",
     "descripcion": "Ron añejo cubano, Coca-Cola y un toque de lima",
@@ -274,5 +262,17 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
+  },
+  {
+    "id": 24,
+    "nombre": "prueba",
+    "descripcion": "prueba",
+    "precio": 1,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": true,
+    "agotado": false,
+    "clasificacion": "RON"
   }
 ]
