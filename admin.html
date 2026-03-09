@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Administración</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #0e0f11;
+    --surface:  #16181c;
+    --border:   #2a2d34;
+    --accent:   #e8c547;
+    --danger:   #e8534a;
+    --success:  #4acd8d;
+    --muted:    #6b7280;
+    --text:     #e8eaf0;
+    --text-dim: #9ca3af;
+    --radius:   10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* ---- LOGIN ---- */
+  #login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 50% 40%, #1a1f2e 0%, var(--bg) 70%);
+  }
+
+  .login-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .login-box .logo-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .login-box h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: var(--text);
+  }
+
+  .login-box input {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 13px 16px;
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .login-box input:focus { border-color: var(--accent); }
+
+  .login-box .error-msg {
+    color: var(--danger);
+    font-size: 13px;
+    margin-bottom: 12px;
+    min-height: 18px;
+  }
+
+  /* ---- BOTONES ---- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.18s ease;
+  }
+
+  .btn-primary   { background: var(--accent); color: #0e0f11; }
+  .btn-primary:hover { background: #f0d060; transform: translateY(-1px); }
+
+  .btn-danger    { background: rgba(232,83,74,0.15); color: var(--danger); border: 1px solid rgba(232,83,74,0.3); }
+  .btn-danger:hover { background: rgba(232,83,74,0.25); }
+
+  .btn-ghost     { background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid var(--border); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.1); color: var(--text); }
+
+  .btn-success   { background: rgba(74,205,141,0.15); color: var(--success); border: 1px solid rgba(74,205,141,0.3); }
+  .btn-success:hover { background: rgba(74,205,141,0.25); }
+
+  .btn-full { width: 100%; justify-content: center; padding: 13px; font-size: 15px; }
+
+  /* ---- LAYOUT ---- */
+  #admin-panel { display: none; }
+
+  .topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .topbar-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+
+  .topbar-right { display: flex; align-items: center; gap: 10px; }
+
+  .save-status {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .save-status.saving { color: var(--accent); }
+  .save-status.saved  { color: var(--success); }
+  .save-status.error  { color: var(--danger); }
+
+  /* ---- TABS ---- */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    padding: 20px 28px 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .tab {
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-dim);
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: none;
+    transition: all 0.18s;
+    position: relative;
+    bottom: -1px;
+  }
+
+  .tab:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+
+  .tab.active {
+    color: var(--text);
+    background: var(--bg);
+    border-color: var(--border);
+    border-bottom-color: var(--bg);
+  }
+
+  .tab .tab-count {
+    display: inline-block;
+    background: var(--border);
+    color: var(--text-dim);
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 6px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .tab.active .tab-count { background: var(--accent); color: #0e0f11; }
+
+  /* ---- CONTENIDO ---- */
+  .content {
+    padding: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ---- BARRA DE ACCIONES ---- */
+  .actions-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .actions-bar-left { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+  /* ---- FILTRO POR IDIOMA ---- */
+  .lang-pills {
+    display: flex;
+    gap: 4px;
+  }
+
+  .lang-pill {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 1px;
+    transition: all 0.18s;
+  }
+
+  .lang-pill:hover { border-color: var(--accent); color: var(--accent); }
+  .lang-pill.active { background: var(--accent); border-color: var(--accent); color: #0e0f11; }
+
+  /* ---- ITEMS ---- */
+  .items-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .item-row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: border-color 0.18s;
+  }
+
+  .item-row:hover { border-color: #3a3d44; }
+  .item-row.inactive { opacity: 0.45; }
+  .item-row.agotado .item-nombre::after {
+    content: ' — AGOTADO';
+    color: var(--danger);
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .item-thumb {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .item-thumb-placeholder {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    background: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .item-info { flex: 1; min-width: 0; }
+
+  .item-nombre {
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .item-meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+
+  .item-meta span {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .item-meta .precio-tag { color: var(--accent); font-weight: 500; }
+
+  .badge-rec {
+    background: #ac2a21;
+    color: white;
+    font-size: 9px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .badge-cat {
+    background: rgba(232,197,71,0.12);
+    color: var(--accent);
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .item-actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.18s;
+    color: var(--text-dim);
+  }
+
+  .icon-btn:hover { background: rgba(255,255,255,0.07); color: var(--text); }
+  .icon-btn.active-toggle { color: var(--success); border-color: rgba(74,205,141,0.3); }
+  .icon-btn.inactive-toggle { color: var(--muted); }
+  .icon-btn.agotado-on { color: var(--danger); border-color: rgba(232,83,74,0.3); }
+  .icon-btn.delete-btn:hover { background: rgba(232,83,74,0.15); color: var(--danger); border-color: rgba(232,83,74,0.3); }
+
+  /* ---- MODAL ---- */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    padding: 20px;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    animation: slideUp 0.22s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .modal-header h2 { font-size: 18px; font-weight: 600; }
+
+  .modal-close {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.18s;
+  }
+
+  .modal-close:hover { color: var(--text); }
+
+  /* ---- FORMULARIO ---- */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+
+  label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    font-family: 'DM Mono', monospace;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 13px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.18s;
+    width: 100%;
+  }
+
+  input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+
+  textarea { resize: vertical; min-height: 72px; }
+
+  select option { background: var(--surface); }
+
+  .toggle-row {
+    display: flex;
+    gap: 12px;
+  }
+
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .toggle-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent);
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ---- TOAST ---- */
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 18px;
+    font-size: 13px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 320px;
+  }
+
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.ok   { border-color: rgba(74,205,141,0.4); color: var(--success); }
+  .toast.err  { border-color: rgba(232,83,74,0.4);  color: var(--danger);  }
+
+  /* ---- CONFIG PANEL ---- */
+  .config-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    max-width: 520px;
+  }
+
+  .config-panel h3 { font-size: 15px; margin-bottom: 18px; color: var(--text-dim); }
+
+  .config-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .config-note {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+
+  /* ---- EMPTY STATE ---- */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+  }
+
+  .empty-state .icon { font-size: 40px; margin-bottom: 12px; }
+  .empty-state p { font-size: 14px; }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 600px) {
+    .content { padding: 16px; }
+    .topbar  { padding: 12px 16px; }
+    .tabs    { padding: 16px 16px 0; overflow-x: auto; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: 1; }
+    .item-row { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== LOGIN ====== -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="logo-text">Bodeguita el Cubano</div>
+    <h1>Panel de Administración</h1>
+    <input type="password" id="pwd-input" placeholder="••••••••" autocomplete="current-password">
+    <div class="error-msg" id="login-error"></div>
+    <button class="btn btn-primary btn-full" onclick="checkPassword()">Entrar</button>
+  </div>
+</div>
+
+<!-- ====== PANEL ====== -->
+<div id="admin-panel">
+
+  <div class="topbar">
+    <div class="topbar-left">⚡ Admin Panel</div>
+    <div class="topbar-right">
+      <span class="save-status" id="save-status"></span>
+      <button class="btn btn-ghost" onclick="showTab('config')">⚙ Config</button>
+      <button class="btn btn-danger" onclick="logout()">Salir</button>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('bebidas')" id="tab-bebidas">
+      🍹 Bebidas <span class="tab-count" id="count-bebidas">0</span>
+    </div>
+    <div class="tab" onclick="showTab('comidas')" id="tab-comidas">
+      🍽️ Comidas <span class="tab-count" id="count-comidas">0</span>
+    </div>
+    <div class="tab" onclick="showTab('postres')" id="tab-postres">
+      🍰 Postres <span class="tab-count" id="count-postres">0</span>
+    </div>
+    <div class="tab" onclick="showTab('config')" id="tab-config">
+      ⚙ Config
+    </div>
+  </div>
+
+  <!-- Bebidas / Comidas / Postres -->
+  <div class="content" id="section-bebidas">
+    <div class="actions-bar">
+      <div class="actions-bar-left">
+        <div class="lang-pills">
+          <button class="lang-pill active" data-lang="es" onclick="switchLang('bebidas','es',this)">ES</button>
+          <button class="lang-pill" data-lang="en" onclick="switchLang('bebidas','en',this)">EN</button>
+          <button class="lang-pill" data-lang="de" onclick="switchLang('bebidas','de',this)">DE</button>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="openModal('bebidas')">+ Nuevo item</button>
+    </div>
+    <div class="items-list" id="list-bebidas"></div>
+  </div>
+
+  <div class="content" id="section-comidas" style="display:none">
+    <div class="actions-bar">
+      <div class="actions-bar-left">
+        <div class="lang-pills">
+          <button class="lang-pill active" data-lang="es" onclick="switchLang('comidas','es',this)">ES</button>
+          <button class="lang-pill" data-lang="en" onclick="switchLang('comidas','en',this)">EN</button>
+          <button class="lang-pill" data-lang="de" onclick="switchLang('comidas','de',this)">DE</button>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="openModal('comidas')">+ Nuevo item</button>
+    </div>
+    <div class="items-list" id="list-comidas"></div>
+  </div>
+
+  <div class="content" id="section-postres" style="display:none">
+    <div class="actions-bar">
+      <div class="actions-bar-left">
+        <div class="lang-pills">
+          <button class="lang-pill active" data-lang="es" onclick="switchLang('postres','es',this)">ES</button>
+          <button class="lang-pill" data-lang="en" onclick="switchLang('postres','en',this)">EN</button>
+          <button class="lang-pill" data-lang="de" onclick="switchLang('postres','de',this)">DE</button>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="openModal('postres')">+ Nuevo item</button>
+    </div>
+    <div class="items-list" id="list-postres"></div>
+  </div>
+
+  <!-- Config -->
+  <div class="content" id="section-config" style="display:none">
+    <div class="config-panel">
+      <h3>Configuración</h3>
+      <div class="config-row">
+        <label>Token de acceso</label>
+        <input type="password" id="cfg-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+        <div class="config-note">
+          Token de acceso proporcionado por el administrador. Solo necesitas introducirlo una vez, quedará guardado en este navegador.
+        </div>
+      </div>
+      <div style="display:flex; gap:10px; margin-top:8px;">
+        <button class="btn btn-primary" onclick="saveConfig()">Guardar token</button>
+        <button class="btn btn-success" onclick="testConnection()">Probar conexión</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ====== MODAL EDICIÓN ====== -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modal-title">Nuevo item</h2>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="form-grid">
+      <input type="hidden" id="f-index">
+      <input type="hidden" id="f-tipo">
+
+      <div class="form-group full">
+        <label>Nombre</label>
+        <input type="text" id="f-nombre" placeholder="Nombre del item">
+      </div>
+      <div class="form-group full">
+        <label>Descripción</label>
+        <textarea id="f-descripcion" placeholder="Descripción breve..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Precio</label>
+        <input type="number" id="f-precio" min="0" step="0.5" placeholder="0">
+      </div>
+      <div class="form-group">
+        <label>Moneda</label>
+        <input type="text" id="f-moneda" placeholder="€" value="€">
+      </div>
+      <div class="form-group full">
+        <label>Imagen (ruta)</label>
+        <input type="text" id="f-imagen" placeholder="assets/bebidas/ejemplo.jpg">
+      </div>
+      <div class="form-group full" id="f-clasificacion-group" style="display:none">
+        <label>Clasificación (subcategoría)</label>
+        <input type="text" id="f-clasificacion" placeholder="cocktails, cervezas, rones...">
+      </div>
+      <div class="form-group full">
+        <div class="toggle-row">
+          <label class="toggle-label">
+            <input type="checkbox" id="f-activo" checked> Activo
+          </label>
+          <label class="toggle-label">
+            <input type="checkbox" id="f-recomendado"> Recomendado
+          </label>
+          <label class="toggle-label">
+            <input type="checkbox" id="f-agotado"> Agotado
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveItem()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== TOAST ====== -->
+<div class="toast" id="toast"></div>
+
+<script>
+// =============================================
+//  CONFIGURACIÓN — edita estos valores (solo tú, el desarrollador)
+// =============================================
+const ADMIN_PASSWORD = "cubano2024";     // Contraseña de acceso al panel
+const SECRET_PARAM   = "gestion-menu";  // Parámetro secreto en la URL
+
+const GITHUB_OWNER  = "Azazel033";      // Tu usuario de GitHub
+const GITHUB_REPO   = "bodeguita_el_cubano"; // Nombre del repositorio
+const GITHUB_BRANCH = "main";            // Rama: main o gh-pages
+const GITHUB_PATH   = "data";           // Carpeta de los JSON
+
+// =============================================
+//  ESTADO
+// =============================================
+let data   = { bebidas: {}, comidas: {}, postres: {} };
+let langs  = { bebidas: "es", comidas: "es", postres: "es" };
+let config = {};
+
+// =============================================
+//  SEGURIDAD — URL SECRETA
+// =============================================
+(function checkSecret() {
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has(SECRET_PARAM)) {
+    document.body.innerHTML = "<h1 style='color:#fff;text-align:center;margin-top:40vh;font-family:sans-serif'>404 — Página no encontrada</h1>";
+  }
+})();
+
+// =============================================
+//  LOGIN
+// =============================================
+document.getElementById("pwd-input").addEventListener("keydown", e => {
+  if (e.key === "Enter") checkPassword();
+});
+
+function checkPassword() {
+  const val = document.getElementById("pwd-input").value;
+  if (val === ADMIN_PASSWORD) {
+    document.getElementById("login-screen").style.display = "none";
+    document.getElementById("admin-panel").style.display  = "block";
+    loadConfig();
+    loadAll();
+  } else {
+    document.getElementById("login-error").textContent = "Contraseña incorrecta.";
+    document.getElementById("pwd-input").value = "";
+  }
+}
+
+function logout() {
+  location.reload();
+}
+
+// =============================================
+//  CONFIG GITHUB
+// =============================================
+function loadConfig() {
+  const saved = JSON.parse(localStorage.getItem("admin_config") || "{}");
+  config = {
+    owner:  GITHUB_OWNER,
+    repo:   GITHUB_REPO,
+    branch: GITHUB_BRANCH,
+    path:   GITHUB_PATH,
+    token:  saved.token || ""
+  };
+  document.getElementById("cfg-token").value = config.token;
+}
+
+function saveConfig() {
+  config.token = document.getElementById("cfg-token").value.trim();
+  localStorage.setItem("admin_config", JSON.stringify({ token: config.token }));
+  toast("Token guardado", "ok");
+}
+
+async function testConnection() {
+  saveConfig();
+  if (!config.token) {
+    toast("Introduce el token primero", "err"); return;
+  }
+  try {
+    const r = await fetch(`https://api.github.com/repos/${config.owner}/${config.repo}`, {
+      headers: { Authorization: `token ${config.token}` }
+    });
+    if (r.ok) toast("✓ Conexión exitosa con el repositorio", "ok");
+    else toast(`Error ${r.status}: revisa usuario, repo o token`, "err");
+  } catch(e) {
+    toast("Error de red al conectar con GitHub", "err");
+  }
+}
+
+// =============================================
+//  CARGA DE DATOS
+// =============================================
+async function loadAll() {
+  const tipos = ["bebidas", "comidas", "postres"];
+  const idiomas = ["es", "en", "de"];
+  for (const tipo of tipos) {
+    data[tipo] = {};
+    for (const lang of idiomas) {
+      data[tipo][lang] = await loadJSON(tipo, lang);
+    }
+  }
+  renderAll();
+}
+
+async function loadJSON(tipo, lang) {
+  // Primero intentar desde GitHub si hay config
+  if (config.owner && config.repo && config.token) {
+    try {
+      const path = `${config.path || "data"}/${tipo}-${lang}.json`;
+      const r = await fetch(
+        `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}?ref=${config.branch || "main"}`,
+        { headers: { Authorization: `token ${config.token}` } }
+      );
+      if (r.ok) {
+        const json = await r.json();
+        return JSON.parse(atob(json.content.replace(/\n/g,"")));
+      }
+    } catch(e) {}
+  }
+  // Fallback: cargar desde data/ local
+  try {
+    const r = await fetch(`data/${tipo}-${lang}.json`);
+    if (r.ok) return await r.json();
+  } catch(e) {}
+  return [];
+}
+
+// =============================================
+//  RENDER
+// =============================================
+function renderAll() {
+  ["bebidas","comidas","postres"].forEach(tipo => {
+    renderList(tipo);
+    updateCount(tipo);
+  });
+}
+
+function renderList(tipo) {
+  const lang  = langs[tipo];
+  const items = data[tipo][lang] || [];
+  const list  = document.getElementById(`list-${tipo}`);
+
+  if (items.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="icon">📭</div><p>No hay items en este idioma</p></div>`;
+    return;
+  }
+
+  list.innerHTML = "";
+  items.forEach((item, idx) => {
+    const row = document.createElement("div");
+    row.className = "item-row" + (!item.activo ? " inactive" : "") + (item.agotado ? " agotado" : "");
+
+    // Miniatura
+    let thumb;
+    if (item.imagen && item.imagen.trim()) {
+      thumb = document.createElement("img");
+      thumb.className = "item-thumb";
+      thumb.src = item.imagen;
+      thumb.onerror = () => { thumb.replaceWith(placeholder(tipo)); };
+    } else {
+      thumb = placeholder(tipo);
+    }
+    row.appendChild(thumb);
+
+    // Info
+    const info = document.createElement("div");
+    info.className = "item-info";
+    const badges = [];
+    if (item.recomendado) badges.push(`<span class="badge-rec">REC</span>`);
+    if (item.clasificacion) badges.push(`<span class="badge-cat">${item.clasificacion}</span>`);
+
+    info.innerHTML = `
+      <div class="item-nombre">${item.nombre || "—"}</div>
+      <div class="item-meta">
+        <span class="precio-tag">${item.precio}${item.moneda}</span>
+        ${badges.join("")}
+        <span>${(item.descripcion || "").substring(0, 60)}${(item.descripcion||"").length > 60 ? "…" : ""}</span>
+      </div>`;
+    row.appendChild(info);
+
+    // Acciones
+    const actions = document.createElement("div");
+    actions.className = "item-actions";
+
+    // Activo toggle
+    const btnActivo = document.createElement("button");
+    btnActivo.className = `icon-btn ${item.activo ? "active-toggle" : "inactive-toggle"}`;
+    btnActivo.title = item.activo ? "Desactivar" : "Activar";
+    btnActivo.textContent = item.activo ? "✓" : "○";
+    btnActivo.onclick = () => toggleField(tipo, idx, "activo");
+
+    // Agotado toggle
+    const btnAgotado = document.createElement("button");
+    btnAgotado.className = `icon-btn ${item.agotado ? "agotado-on" : ""}`;
+    btnAgotado.title = item.agotado ? "Marcar disponible" : "Marcar agotado";
+    btnAgotado.textContent = "⊘";
+    btnAgotado.onclick = () => toggleField(tipo, idx, "agotado");
+
+    // Editar
+    const btnEdit = document.createElement("button");
+    btnEdit.className = "icon-btn";
+    btnEdit.title = "Editar";
+    btnEdit.textContent = "✎";
+    btnEdit.onclick = () => openModal(tipo, idx);
+
+    // Eliminar
+    const btnDel = document.createElement("button");
+    btnDel.className = "icon-btn delete-btn";
+    btnDel.title = "Eliminar";
+    btnDel.textContent = "✕";
+    btnDel.onclick = () => deleteItem(tipo, idx);
+
+    actions.append(btnActivo, btnAgotado, btnEdit, btnDel);
+    row.appendChild(actions);
+    list.appendChild(row);
+  });
+}
+
+function placeholder(tipo) {
+  const el = document.createElement("div");
+  el.className = "item-thumb-placeholder";
+  el.textContent = tipo === "bebidas" ? "🍹" : tipo === "comidas" ? "🍽️" : "🍰";
+  return el;
+}
+
+function updateCount(tipo) {
+  const total = Object.values(data[tipo]).reduce((max, arr) => Math.max(max, arr.length), 0);
+  document.getElementById(`count-${tipo}`).textContent = total;
+}
+
+// =============================================
+//  TABS / IDIOMA
+// =============================================
+function showTab(tipo) {
+  ["bebidas","comidas","postres","config"].forEach(t => {
+    document.getElementById(`section-${t}`).style.display = t === tipo ? "block" : "none";
+    document.getElementById(`tab-${t}`)?.classList.toggle("active", t === tipo);
+  });
+}
+
+function switchLang(tipo, lang, btn) {
+  langs[tipo] = lang;
+  btn.closest(".lang-pills").querySelectorAll(".lang-pill").forEach(p => p.classList.remove("active"));
+  btn.classList.add("active");
+  renderList(tipo);
+}
+
+// =============================================
+//  MODAL
+// =============================================
+function openModal(tipo, idx) {
+  const isEdit = idx !== undefined;
+  const item   = isEdit ? (data[tipo][langs[tipo]][idx] || {}) : {};
+
+  document.getElementById("modal-title").textContent = isEdit ? "Editar item" : "Nuevo item";
+  document.getElementById("f-index").value       = isEdit ? idx : "";
+  document.getElementById("f-tipo").value        = tipo;
+  document.getElementById("f-nombre").value      = item.nombre      || "";
+  document.getElementById("f-descripcion").value = item.descripcion || "";
+  document.getElementById("f-precio").value      = item.precio      ?? "";
+  document.getElementById("f-moneda").value      = item.moneda      || "€";
+  document.getElementById("f-imagen").value      = item.imagen      || "";
+  document.getElementById("f-clasificacion").value = item.clasificacion || "";
+  document.getElementById("f-activo").checked      = item.activo      ?? true;
+  document.getElementById("f-recomendado").checked = item.recomendado ?? false;
+  document.getElementById("f-agotado").checked     = item.agotado     ?? false;
+
+  // Solo mostrar clasificación en bebidas
+  document.getElementById("f-clasificacion-group").style.display = tipo === "bebidas" ? "block" : "none";
+
+  document.getElementById("modal-overlay").classList.add("open");
+  document.getElementById("f-nombre").focus();
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.remove("open");
+}
+
+document.getElementById("modal-overlay").addEventListener("click", e => {
+  if (e.target === document.getElementById("modal-overlay")) closeModal();
+});
+
+// =============================================
+//  GUARDAR ITEM
+// =============================================
+function saveItem() {
+  const tipo  = document.getElementById("f-tipo").value;
+  const idxRaw = document.getElementById("f-index").value;
+  const isEdit = idxRaw !== "";
+  const lang   = langs[tipo];
+
+  const item = {
+    id:            isEdit ? data[tipo][lang][parseInt(idxRaw)].id : nextId(tipo, lang),
+    nombre:        document.getElementById("f-nombre").value.trim(),
+    descripcion:   document.getElementById("f-descripcion").value.trim(),
+    precio:        parseFloat(document.getElementById("f-precio").value) || 0,
+    moneda:        document.getElementById("f-moneda").value.trim() || "€",
+    imagen:        document.getElementById("f-imagen").value.trim(),
+    activo:        document.getElementById("f-activo").checked,
+    recomendado:   document.getElementById("f-recomendado").checked,
+    agotado:       document.getElementById("f-agotado").checked
+  };
+
+  if (tipo === "bebidas") {
+    item.clasificacion = document.getElementById("f-clasificacion").value.trim();
+  }
+
+  if (!item.nombre) { toast("El nombre es obligatorio", "err"); return; }
+
+  if (isEdit) {
+    data[tipo][lang][parseInt(idxRaw)] = item;
+  } else {
+    data[tipo][lang].push(item);
+  }
+
+  closeModal();
+  renderList(tipo);
+  updateCount(tipo);
+  commitJSON(tipo, lang);
+}
+
+function nextId(tipo, lang) {
+  const items = data[tipo][lang] || [];
+  return items.length > 0 ? Math.max(...items.map(i => i.id || 0)) + 1 : 1;
+}
+
+// =============================================
+//  TOGGLES RÁPIDOS
+// =============================================
+function toggleField(tipo, idx, field) {
+  const lang = langs[tipo];
+  data[tipo][lang][idx][field] = !data[tipo][lang][idx][field];
+  renderList(tipo);
+  commitJSON(tipo, lang);
+}
+
+// =============================================
+//  ELIMINAR
+// =============================================
+function deleteItem(tipo, idx) {
+  const lang = langs[tipo];
+  const nombre = data[tipo][lang][idx]?.nombre || "este item";
+  if (!confirm(`¿Eliminar "${nombre}"?`)) return;
+  data[tipo][lang].splice(idx, 1);
+  renderList(tipo);
+  updateCount(tipo);
+  commitJSON(tipo, lang);
+}
+
+// =============================================
+//  GITHUB API — COMMIT
+// =============================================
+async function commitJSON(tipo, lang) {
+  if (!config.owner || !config.repo || !config.token) {
+    toast("⚠ Configura GitHub para guardar en el servidor", "err"); return;
+  }
+
+  const path    = `${config.path || "data"}/${tipo}-${lang}.json`;
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(data[tipo][lang], null, 2))));
+  const branch  = config.branch || "main";
+
+  setStatus("saving", "Guardando…");
+
+  try {
+    // Obtener SHA actual del archivo
+    const getR = await fetch(
+      `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}?ref=${branch}`,
+      { headers: { Authorization: `token ${config.token}` } }
+    );
+
+    let sha = null;
+    if (getR.ok) {
+      const getJson = await getR.json();
+      sha = getJson.sha;
+    }
+
+    const body = {
+      message: `Admin: actualiza ${tipo}-${lang}.json`,
+      content,
+      branch,
+      ...(sha ? { sha } : {})
+    };
+
+    const putR = await fetch(
+      `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}`,
+      {
+        method:  "PUT",
+        headers: {
+          Authorization: `token ${config.token}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+      }
+    );
+
+    if (putR.ok) {
+      setStatus("saved", "✓ Guardado");
+      toast(`${tipo}-${lang}.json actualizado`, "ok");
+      setTimeout(() => setStatus("", ""), 3000);
+    } else {
+      const err = await putR.json();
+      setStatus("error", "Error al guardar");
+      toast(`Error GitHub: ${err.message}`, "err");
+    }
+  } catch(e) {
+    setStatus("error", "Error de red");
+    toast("Error de red al guardar", "err");
+  }
+}
+
+function setStatus(cls, text) {
+  const el = document.getElementById("save-status");
+  el.className = "save-status" + (cls ? ` ${cls}` : "");
+  el.textContent = text;
+}
+
+// =============================================
+//  TOAST
+// =============================================
+let toastTimer;
+function toast(msg, type="ok") {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = `toast ${type} show`;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("show"), 3500);
+}
+</script>
+</body>
+</html>
