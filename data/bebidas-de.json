@@ -617,11 +617,11 @@
     "descripcion": "Ron blanco, lima, hierbabuena y azúcar de caña",
     "precio": 10,
     "moneda": "€",
-    "imagen": "",
-    "clasificacion": "cocktails",
+    "imagen": "assets/bebidas/klassischer-mojito-1773333063680.jpeg",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cocktails"
   },
   {
     "id": 53,
