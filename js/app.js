@@ -51,7 +51,7 @@ if (tipo) {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
 
-  fetch(`data/${tipo}-${lang}.json`)
+  fetch(`data/${tipo}-${lang}.json?_=${Date.now()}`, { cache: 'no-store' })
     .then(r => r.json())
     .then(data => {
       if (tipo === "bebidas") {
