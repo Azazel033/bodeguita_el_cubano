@@ -1,68 +1,35 @@
 [
   {
     "id": 1,
-    "nombre": "Rum & Coconut Flan",
-    "descripcion": "Creamy coconut milk flan with aged rum caramel. Grandma's recipe",
-    "precio": 6,
+    "nombre": "Ice cream",
+    "descripcion": "Homemade artisan ice cream",
+    "precio": 3,
     "moneda": "€",
-    "imagen": "assets/postres/placeholder.jpg",
-    "recomendado": true,
+    "imagen": "",
+    "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 2,
-    "nombre": "Cuban Rice Pudding",
-    "descripcion": "Creamy rice infused with cinnamon, star anise and lemon zest. Served cold",
-    "precio": 5,
+    "nombre": "Flan",
+    "descripcion": "Grandmother's homemade flan",
+    "precio": 4,
     "moneda": "€",
-    "imagen": "assets/postres/arroz-leche.jpg",
+    "imagen": "",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 3,
-    "nombre": "Churros with Caribbean Hot Chocolate",
-    "descripcion": "Crispy churros with dark drinking chocolate infused with chilli and cinnamon",
+    "nombre": "Copa Lolita",
+    "descripcion": "Special house dessert",
     "precio": 6,
     "moneda": "€",
-    "imagen": "assets/postres/churros.jpg",
+    "imagen": "",
     "recomendado": false,
     "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 4,
-    "nombre": "Guava & Cream Cheese Tart",
-    "descripcion": "Biscuit base, cream cheese filling and tropical guava coulis. The perfect Caribbean combination",
-    "precio": 7,
-    "moneda": "€",
-    "imagen": "assets/postres/tarta-guayaba.jpg",
-    "recomendado": true,
-    "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 5,
-    "nombre": "Passion Fruit Ice Cream",
-    "descripcion": "Artisan passion fruit ice cream with passion fruit seeds and fresh mint",
-    "precio": 5,
-    "moneda": "€",
-    "imagen": "assets/postres/helado-maracuya.jpg",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 6,
-    "nombre": "Yuca Fritters",
-    "descripcion": "Fried yuca and malanga fritters with anise syrup and sugar cane honey",
-    "precio": 6,
-    "moneda": "€",
-    "imagen": "assets/postres/bunuelos.jpg",
-    "recomendado": false,
-    "agotado": true,
     "activo": true
   }
 ]

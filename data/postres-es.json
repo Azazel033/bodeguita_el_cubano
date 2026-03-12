@@ -1,68 +1,35 @@
 [
   {
     "id": 1,
-    "nombre": "Flan de Ron y Coco",
-    "descripcion": "Flan cremoso de leche de coco con caramelo de ron aÃ±ejo. Receta de la abuela",
-    "precio": 6,
-    "moneda": "â¬",
-    "imagen": "assets/postres/placeholder.jpg",
-    "recomendado": true,
+    "nombre": "Helado",
+    "descripcion": "Helado artesanal de la casa",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "recomendado": false,
     "agotado": false,
-    "activo": false
+    "activo": true
   },
   {
     "id": 2,
-    "nombre": "Arroz con Leche Cubano",
-    "descripcion": "Arroz cremoso infusionado con canela, anÃ­s estrellado y ralladura de limÃ³n. Servido frÃ­o",
-    "precio": 5,
-    "moneda": "â¬",
-    "imagen": "assets/postres/arroz-leche.jpg",
+    "nombre": "Flan",
+    "descripcion": "Flan casero de la abuela",
+    "precio": 4,
+    "moneda": "€",
+    "imagen": "",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 3,
-    "nombre": "Churros con Chocolate CaribeÃ±o",
-    "descripcion": "Churros crujientes con chocolate negro a la taza con guindilla y canela",
+    "nombre": "Copa Lolita",
+    "descripcion": "Postre especial de la casa",
     "precio": 6,
-    "moneda": "â¬",
-    "imagen": "assets/postres/churros.jpg",
+    "moneda": "€",
+    "imagen": "",
     "recomendado": false,
     "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 4,
-    "nombre": "Tarta de Guayaba y Queso",
-    "descripcion": "Base de galleta, crema de queso y coulis de guayaba tropical. La combinaciÃ³n perfecta del Caribe",
-    "precio": 7,
-    "moneda": "â¬",
-    "imagen": "assets/postres/tarta-guayaba.jpg",
-    "recomendado": true,
-    "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 5,
-    "nombre": "Helado de MaracuyÃ¡",
-    "descripcion": "Helado artesanal de maracuyÃ¡ con semillas de fruta de la pasiÃ³n y menta fresca",
-    "precio": 5,
-    "moneda": "â¬",
-    "imagen": "assets/postres/helado-maracuya.jpg",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 6,
-    "nombre": "BuÃ±uelos de Viento",
-    "descripcion": "BuÃ±uelos de yuca y malanga fritos, con almÃ­bar de anÃ­s y miel de caÃ±a",
-    "precio": 6,
-    "moneda": "â¬",
-    "imagen": "assets/postres/bunuelos.jpg",
-    "recomendado": false,
-    "agotado": true,
     "activo": true
   }
 ]
