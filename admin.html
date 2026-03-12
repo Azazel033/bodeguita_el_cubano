@@ -970,10 +970,10 @@ async function loadJSON(tipo, lang) {
   // Primero intentar desde GitHub si hay config
   if (config.owner && config.repo && config.token) {
     try {
-      const path = `${config.path || "data"}/${tipo}-${lang}.json`;
+      const ghPath = `${config.path || "data"}/${tipo}-${lang}.json`;
       const r = await fetch(
-        `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}?ref=${config.branch || "main"}`,
-        { headers: { Authorization: `token ${config.token}` } }
+        `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${ghPath}?ref=${config.branch || "main"}&_=${Date.now()}`,
+        { headers: { Authorization: `token ${config.token}` }, cache: "no-store" }
       );
       if (r.ok) {
         const json = await r.json();
@@ -981,9 +981,9 @@ async function loadJSON(tipo, lang) {
       }
     } catch(e) {}
   }
-  // Fallback: cargar desde data/ local
+  // Fallback: cargar desde data/ local (sin caché)
   try {
-    const r = await fetch(`data/${tipo}-${lang}.json`);
+    const r = await fetch(`data/${tipo}-${lang}.json?_=${Date.now()}`, { cache: "no-store" });
     if (r.ok) return await r.json();
   } catch(e) {}
   return [];
