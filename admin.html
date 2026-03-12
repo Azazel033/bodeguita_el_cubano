@@ -475,6 +475,61 @@
   }
 
 
+
+  /* ---- BUSCADOR ---- */
+  .search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 180px;
+    max-width: 320px;
+  }
+  .search-wrap input {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 9px 34px 9px 13px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+  }
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-wrap input::placeholder { color: var(--muted); }
+  .search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    display: none;
+  }
+  .search-clear.visible { display: block; }
+  .search-count {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .item-row.hidden { display: none; }
+  .no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    font-size: 13px;
+    display: none;
+  }
+  .no-results.visible { display: block; }
+
   /* ---- IMAGE UPLOADER ---- */
   .img-upload-area {
     border: 2px dashed var(--border);
@@ -663,7 +718,15 @@
       </div>
       <button class="btn btn-primary" onclick="openModal('bebidas')">+ Nuevo item</button>
     </div>
+    <div class="actions-bar-left" style="padding: 0 0 12px 0; gap:10px; display:flex; flex-wrap:wrap; align-items:center;">
+      <div class="search-wrap">
+        <input type="text" id="search-bebidas" placeholder="Buscar elemento..." oninput="filterList('bebidas', this.value)">
+        <button class="search-clear" id="search-clear-bebidas" onclick="clearSearch('bebidas')">✕</button>
+      </div>
+      <span class="search-count" id="search-count-bebidas"></span>
+    </div>
     <div class="items-list" id="list-bebidas"></div>
+    <div class="no-results" id="no-results-bebidas">No se encontraron resultados.</div>
   </div>
 
   <div class="content" id="section-comidas" style="display:none">
@@ -677,7 +740,15 @@
       </div>
       <button class="btn btn-primary" onclick="openModal('comidas')">+ Nuevo item</button>
     </div>
+    <div class="actions-bar-left" style="padding: 0 0 12px 0; gap:10px; display:flex; flex-wrap:wrap; align-items:center;">
+      <div class="search-wrap">
+        <input type="text" id="search-comidas" placeholder="Buscar elemento..." oninput="filterList('comidas', this.value)">
+        <button class="search-clear" id="search-clear-comidas" onclick="clearSearch('comidas')">✕</button>
+      </div>
+      <span class="search-count" id="search-count-comidas"></span>
+    </div>
     <div class="items-list" id="list-comidas"></div>
+    <div class="no-results" id="no-results-comidas">No se encontraron resultados.</div>
   </div>
 
   <div class="content" id="section-postres" style="display:none">
@@ -691,7 +762,15 @@
       </div>
       <button class="btn btn-primary" onclick="openModal('postres')">+ Nuevo item</button>
     </div>
+    <div class="actions-bar-left" style="padding: 0 0 12px 0; gap:10px; display:flex; flex-wrap:wrap; align-items:center;">
+      <div class="search-wrap">
+        <input type="text" id="search-postres" placeholder="Buscar elemento..." oninput="filterList('postres', this.value)">
+        <button class="search-clear" id="search-clear-postres" onclick="clearSearch('postres')">✕</button>
+      </div>
+      <span class="search-count" id="search-count-postres"></span>
+    </div>
     <div class="items-list" id="list-postres"></div>
+    <div class="no-results" id="no-results-postres">No se encontraron resultados.</div>
   </div>
 
   <!-- Config -->
@@ -789,8 +868,8 @@
 const ADMIN_PASSWORD = "cubano2026";     // Contraseña de acceso al panel
 const SECRET_PARAM   = "gestion-menu";  // Parámetro secreto en la URL
 
-const GITHUB_OWNER  = "TU_USUARIO";      // Tu usuario de GitHub
-const GITHUB_REPO   = "TU_REPOSITORIO"; // Nombre del repositorio
+const GITHUB_OWNER  = "Azazel033";      // Tu usuario de GitHub
+const GITHUB_REPO   = "bodeguita_el_cubano"; // Nombre del repositorio
 const GITHUB_BRANCH = "main";            // Rama: main o gh-pages
 const GITHUB_PATH   = "data";           // Carpeta de los JSON
 
@@ -1341,6 +1420,9 @@ function setStatus(cls, text) {
   el.textContent = text;
 }
 
+// =============================================
+//  TOAST
+// =============================================
 let toastTimer;
 function toast(msg, type="ok") {
   const el = document.getElementById("toast");
@@ -1349,6 +1431,53 @@ function toast(msg, type="ok") {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => el.classList.remove("show"), 3500);
 }
+
+// =============================================
+//  BUSCADOR
+// =============================================
+function filterList(tipo, query) {
+  const q = query.trim().toLowerCase();
+  const rows = document.querySelectorAll(`#list-${tipo} .item-row`);
+  const clearBtn = document.getElementById(`search-clear-${tipo}`);
+  const countEl  = document.getElementById(`search-count-${tipo}`);
+  const noResults = document.getElementById(`no-results-${tipo}`);
+
+  clearBtn.classList.toggle("visible", q.length > 0);
+
+  let visible = 0;
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    const match = !q || text.includes(q);
+    row.classList.toggle("hidden", !match);
+    if (match) visible++;
+  });
+
+  if (q) {
+    countEl.textContent = `${visible} resultado${visible !== 1 ? "s" : ""}`;
+    noResults.classList.toggle("visible", visible === 0);
+  } else {
+    countEl.textContent = "";
+    noResults.classList.remove("visible");
+  }
+}
+
+function clearSearch(tipo) {
+  const input = document.getElementById(`search-${tipo}`);
+  input.value = "";
+  filterList(tipo, "");
+  input.focus();
+}
+
+// Limpiar buscador al cambiar de idioma
+const _origSwitchLang = switchLang;
+function switchLang(tipo, lang, btn) {
+  clearSearch(tipo);
+  langs[tipo] = lang;
+  btn.closest(".lang-pills").querySelectorAll(".lang-pill").forEach(p => p.classList.remove("active"));
+  btn.classList.add("active");
+  renderList(tipo);
+}
+
 </script>
 </body>
 </html>
