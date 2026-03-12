@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Zumo natural de naranja",
-    "descripcion": "",
-    "precio": 4,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": true,
-    "agotado": true,
-    "clasificacion": "zumos"
-  },
-  {
     "id": 2,
     "nombre": "MelocotÃ³n",
     "descripcion": "",
