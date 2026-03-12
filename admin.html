@@ -865,11 +865,11 @@
 // =============================================
 //  CONFIGURACIÓN — edita estos valores (solo tú, el desarrollador)
 // =============================================
-const ADMIN_PASSWORD = "bodeguita2026";     // Contraseña de acceso al panel
+const ADMIN_PASSWORD = "cubano2024";     // Contraseña de acceso al panel
 const SECRET_PARAM   = "gestion-menu";  // Parámetro secreto en la URL
 
-const GITHUB_OWNER  = "Azazel033";      // Tu usuario de GitHub
-const GITHUB_REPO   = "bodeguita_el_cubano"; // Nombre del repositorio
+const GITHUB_OWNER  = "TU_USUARIO";      // Tu usuario de GitHub
+const GITHUB_REPO   = "TU_REPOSITORIO"; // Nombre del repositorio
 const GITHUB_BRANCH = "main";            // Rama: main o gh-pages
 const GITHUB_PATH   = "data";           // Carpeta de los JSON
 
@@ -977,7 +977,7 @@ async function loadJSON(tipo, lang) {
       );
       if (r.ok) {
         const json = await r.json();
-        return JSON.parse(atob(json.content.replace(/\n/g,"")));
+        return JSON.parse(decodeURIComponent(escape(atob(json.content.replace(/\n/g,"")))));
       }
     } catch(e) {}
   }
