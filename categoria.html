@@ -1,110 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Categoría</title>
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categoría</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap"
+    rel="stylesheet">
 </head>
+
 <body class="has-fixed-header">
 
-<header class="menu-header site-header">
-  <div class="header-inner">
-    <img src="assets/logo.png" class="logo" alt="Logo del restaurante">
+  <header class="menu-header site-header">
+    <div class="header-inner">
+      <img src="assets/logo.png" class="logo" alt="Logo del restaurante">
 
-    <a id="back-btn" href="index.html" class="back-btn">⬅ Volver</a>
+      <a id="back-btn" href="index.html" class="back-btn">⬅ Volver</a>
 
-    <div class="lang-selector">
-      <button class="lang-btn active" data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES"> ES</button>
-      <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN"> EN</button>
-      <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE"> DE</button>
+      <div class="lang-selector">
+        <button class="lang-btn active" data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES"> ES</button>
+        <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN"> EN</button>
+        <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE"> DE</button>
+      </div>
+
+      <nav class="cat-nav">
+        <a class="category-card" id="nav-bebidas" href="categoria.html?tipo=bebidas">
+          <!-- <img src="assets/icono bebidas.png" alt="Bebidas"> -->
+          <img class="texto-cat" id="nav-texto-bebidas" src="assets/texto bebida-es.png" alt="Bebidas"
+            style="width: auto; height: auto;">
+        </a>
+        <a class="category-card" id="nav-comidas" href="categoria.html?tipo=comidas">
+          <!-- <img src="assets/icono comida.png" alt="Comidas"> -->
+          <img class="texto-cat" id="nav-texto-comidas" src="assets/texto comida-es.png" alt="Comidas"
+            style="width: auto; height: auto;">
+        </a>
+        <a class="category-card" id="nav-postres" href="categoria.html?tipo=postres">
+          <!-- <img src="assets/icono postre.png" alt="Comidas"> -->
+          <img class="texto-cat" id="nav-texto-postres" src="assets/texto postre-es.png" alt="Postres"
+            style="width: auto; height: auto;">
+        </a>
+      </nav>
     </div>
+  </header>
 
-    <nav class="cat-nav">
-      <a class="category-card" id="nav-bebidas" href="categoria.html?tipo=bebidas">
-        <!-- <img src="assets/icono bebidas.png" alt="Bebidas"> -->
-        <img class="texto-cat" id="nav-texto-bebidas" src="assets/texto bebida-es.png" alt="Bebidas" style="width: auto; height: auto;">
-      </a>
-      <a class="category-card" id="nav-comidas" href="categoria.html?tipo=comidas">
-        <!-- <img src="assets/icono comida.png" alt="Comidas"> -->
-        <img class="texto-cat" id="nav-texto-comidas" src="assets/texto comida-es.png" alt="Comidas"  style="width: auto; height: auto;">
-      </a>
-      <a class="category-card" id="nav-postres" href="categoria.html?tipo=postres">
-        <!-- <img src="assets/icono postre.png" alt="Comidas"> -->
-        <img class="texto-cat" id="nav-texto-postres" src="assets/texto postre-es.png" alt="Postres" style="width: auto; height: auto;">
-      </a>
-    </nav>
-  </div>
-</header>
-
-<main class="main-with-header">
-<img id="titulo-categoria" src="" alt="" style="width:50%; height:auto; margin: 10px auto 0; display:block;">
-<div id="menu-container"></div>
-<div class="social-links">
-  <a href="tel:689253123"><img src="assets/icono telef.png" alt="Teléfono"></a>
-  <a href="https://es-es.facebook.com/BodeguitaElCubano"><img src="assets/icono face.png" alt="Facebook"></a>
-  <a href="https://wa.me/+34689253123"><img src="assets/icono wasap.png" alt="WhatsApp"></a>
-  </div><br>
-  <center><a href="https://maps.app.goo.gl/vyyn5Ja4WcxPhRtz6" style="text-decoration: none; color: white;">
-  <pre style="color: white; font-size: 9pt; font-family: 'Montserrat', sans-serif; margin: 0;">
-AVENIDA PRIMAVERA 17, COLONIA SANT JORDI (43,30 km)
+  <main class="main-with-header">
+    <img id="titulo-categoria" src="" alt="" style="width:50%; height:auto; margin: 10px auto 0; display:block;">
+    <div id="menu-container"></div>
+    <div class="social-links">
+      <a href="tel:689253123"><img src="assets/icono telef.png" alt="Teléfono"></a>
+      <a href="https://es-es.facebook.com/BodeguitaElCubano"><img src="assets/icono face.png" alt="Facebook"></a>
+      <a href="https://wa.me/+34689253123"><img src="assets/icono wasap.png" alt="WhatsApp"></a>
+    </div><br>
+    <center><a href="https://maps.app.goo.gl/vyyn5Ja4WcxPhRtz6" style="text-decoration: none; color: white;">
+        <pre style="color: white; font-size: 9pt; font-family: 'Montserrat', sans-serif; margin: 0;">
+🗺️ AVENIDA PRIMAVERA 17, COLONIA SANT JORDI (43,30 km)
 07638 Ses Salines, Islas Baleares, Spain
   </pre>
-</a>
-</div>
-</main> 
+      </a>
+      </div>
+  </main>
 
-<script src="js/app.js"></script>
-<script>
-  const savedLang = localStorage.getItem("lang") || "es";
-  const currentTipo = new URLSearchParams(window.location.search).get("tipo");
+  <script src="js/app.js"></script>
+  <script>
+    const savedLang = localStorage.getItem("lang") || "es";
+    const currentTipo = new URLSearchParams(window.location.search).get("tipo");
 
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.lang === savedLang);
-    btn.addEventListener("click", () => {
-      const params = new URLSearchParams(window.location.search);
-      params.set("lang", btn.dataset.lang);
-      localStorage.setItem("lang", btn.dataset.lang);
-      window.location.search = params.toString();
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === savedLang);
+      btn.addEventListener("click", () => {
+        const params = new URLSearchParams(window.location.search);
+        params.set("lang", btn.dataset.lang);
+        localStorage.setItem("lang", btn.dataset.lang);
+        window.location.search = params.toString();
+      });
     });
-  });
 
-  function updateCatNav(lang) {
-    document.getElementById("nav-texto-bebidas").src = `assets/texto bebida-${lang}.png`;
-    document.getElementById("nav-texto-comidas").src = `assets/texto comida-${lang}.png`;
-    document.getElementById("nav-texto-postres").src = `assets/texto postre-${lang}.png`;
-    document.getElementById("nav-bebidas").href = `categoria.html?tipo=bebidas&lang=${lang}`;
-    document.getElementById("nav-comidas").href = `categoria.html?tipo=comidas&lang=${lang}`;
-    document.getElementById("nav-postres").href = `categoria.html?tipo=postres&lang=${lang}`;
+    function updateCatNav(lang) {
+      document.getElementById("nav-texto-bebidas").src = `assets/texto bebida-${lang}.png`;
+      document.getElementById("nav-texto-comidas").src = `assets/texto comida-${lang}.png`;
+      document.getElementById("nav-texto-postres").src = `assets/texto postre-${lang}.png`;
+      document.getElementById("nav-bebidas").href = `categoria.html?tipo=bebidas&lang=${lang}`;
+      document.getElementById("nav-comidas").href = `categoria.html?tipo=comidas&lang=${lang}`;
+      document.getElementById("nav-postres").href = `categoria.html?tipo=postres&lang=${lang}`;
 
-    // Sincronizar imagen del título con la categoría activa
-    if (currentTipo) {
-      const navTexto = document.getElementById(`nav-texto-${currentTipo}`);
-      const tituloImg = document.getElementById("titulo-categoria");
-      if (navTexto && tituloImg) tituloImg.src = navTexto.src.replace('.png', '-blanco.png');
+      // Sincronizar imagen del título con la categoría activa
+      if (currentTipo) {
+        const navTexto = document.getElementById(`nav-texto-${currentTipo}`);
+        const tituloImg = document.getElementById("titulo-categoria");
+        if (navTexto && tituloImg) tituloImg.src = navTexto.src.replace('.png', '-blanco.png');
+      }
     }
-  }
 
-  if (currentTipo) {
-    const activeCard = document.getElementById(`nav-${currentTipo}`);
-    if (activeCard) activeCard.classList.add("cat-active");
-  }
+    if (currentTipo) {
+      const activeCard = document.getElementById(`nav-${currentTipo}`);
+      if (activeCard) activeCard.classList.add("cat-active");
+    }
 
-  updateCatNav(savedLang);
-</script>
+    updateCatNav(savedLang);
+  </script>
 
 
-<script>
-  // Mide el header y actualiza --header-h para que el main quede 5px por debajo
-  function updateHeaderHeight() {
-    const h = document.querySelector('.site-header');
-    if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
-  }
-  updateHeaderHeight();
-  window.addEventListener('resize', updateHeaderHeight);
-  // Re-medir tras cargar imágenes del header (por si cambian el alto)
-  window.addEventListener('load', updateHeaderHeight);
-</script>
+  <script>
+    // Mide el header y actualiza --header-h para que el main quede 5px por debajo
+    function updateHeaderHeight() {
+      const h = document.querySelector('.site-header');
+      if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+    }
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+    // Re-medir tras cargar imágenes del header (por si cambian el alto)
+    window.addEventListener('load', updateHeaderHeight);
+  </script>
 </body>
+
 </html>

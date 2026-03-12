@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menú Caribeño</title>
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Caribeño</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap"
+    rel="stylesheet">
 </head>
+
 <body class="centered">
 
-<header class="menu-header">
-  <img src="assets/logo.png" class="logo" alt="Logo del restaurante">
-  <div class="lang-selector">
-    <button class="lang-btn active" data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES"> ES</button>
-    <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN"> EN</button>
-    <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE"> DE</button>
-  </div>
-</header>
+  <header class="menu-header">
+    <img src="assets/logo.png" class="logo" alt="Logo del restaurante">
+    <div class="lang-selector">
+      <button class="lang-btn active" data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES"> ES</button>
+      <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN"> EN</button>
+      <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE"> DE</button>
+    </div>
+  </header>
 
-<main class="categories-container">
+  <main class="categories-container">
 
-  <a class="category-card" id="card-bebidas" href="categoria.html?tipo=bebidas&lang=es">
-    <img src="assets/icono bebidas.png">
-    <img id="texto-bebidas" src="assets/texto bebida-es.png" alt="Bebidas">
-  </a>
+    <a class="category-card" id="card-bebidas" href="categoria.html?tipo=bebidas&lang=es">
+      <img src="assets/icono bebidas.png">
+      <img id="texto-bebidas" src="assets/texto bebida-es.png" alt="Bebidas">
+    </a>
 
-  <a class="category-card" id="card-comidas" href="categoria.html?tipo=comidas&lang=es">
-    <img src="assets/icono comida.png">
-    <img id="texto-comidas" src="assets/texto comida-es.png" alt="Comidas">
-  </a>
+    <a class="category-card" id="card-comidas" href="categoria.html?tipo=comidas&lang=es">
+      <img src="assets/icono comida.png">
+      <img id="texto-comidas" src="assets/texto comida-es.png" alt="Comidas">
+    </a>
 
-  <a class="category-card" id="card-postres" href="categoria.html?tipo=postres&lang=es">
-    <img src="assets/icono postre.png">
-    <img id="texto-postres" src="assets/texto postre-es.png" alt="Postres">
-  </a>
+    <a class="category-card" id="card-postres" href="categoria.html?tipo=postres&lang=es">
+      <img src="assets/icono postre.png">
+      <img id="texto-postres" src="assets/texto postre-es.png" alt="Postres">
+    </a>
 
-  <div class="social-links">
-  <a href="tel:689253123"><img src="assets/icono telef.png" alt="Teléfono"></a>
-  <a href="https://es-es.facebook.com/BodeguitaElCubano"><img src="assets/icono face.png" alt="Facebook"></a>
-  <a href="https://wa.me/+34689253123"><img src="assets/icono wasap.png" alt="WhatsApp"></a>
-</main>
+    <div class="social-links">
+      <a href="tel:689253123"><img src="assets/icono telef.png" alt="Teléfono"></a>
+      <a href="https://es-es.facebook.com/BodeguitaElCubano"><img src="assets/icono face.png" alt="Facebook"></a>
+      <a href="https://wa.me/+34689253123"><img src="assets/icono wasap.png" alt="WhatsApp"></a>
+  </main>
 
-</div><br>
+  </div><br>
   <center><a href="https://maps.app.goo.gl/vyyn5Ja4WcxPhRtz6" style="text-decoration: none; color: white;">
-  <pre style="color: white; font-size: 9pt; font-family: 'Montserrat', sans-serif; margin: 0;">
-AVENIDA PRIMAVERA 17, COLONIA SANT JORDI (43,30 km)
+      <pre style="color: white; font-size: 9pt; font-family: 'Montserrat', sans-serif; margin: 0;">
+🗺️ AVENIDA PRIMAVERA 17, COLONIA SANT JORDI (43,30 km)
 07638 Ses Salines, Islas Baleares, Spain
   </pre>
-</a>
-  </div>
+    </a>
+    </div>
 
-<script>
-  let currentLang = localStorage.getItem("lang") || "es";
+    <script>
+      let currentLang = localStorage.getItem("lang") || "es";
 
-  function applyLang(lang) {
-    currentLang = lang;
-    localStorage.setItem("lang", lang);
+      function applyLang(lang) {
+        currentLang = lang;
+        localStorage.setItem("lang", lang);
 
-    // Cambiar imágenes de texto
-    document.getElementById("texto-bebidas").src = `assets/texto bebida-${lang}.png`;
-    document.getElementById("texto-comidas").src = `assets/texto comida-${lang}.png`;
-    document.getElementById("texto-postres").src = `assets/texto postre-${lang}.png`;
+        // Cambiar imágenes de texto
+        document.getElementById("texto-bebidas").src = `assets/texto bebida-${lang}.png`;
+        document.getElementById("texto-comidas").src = `assets/texto comida-${lang}.png`;
+        document.getElementById("texto-postres").src = `assets/texto postre-${lang}.png`;
 
-    // Actualizar enlaces con el idioma
-    document.getElementById("card-bebidas").href = `categoria.html?tipo=bebidas&lang=${lang}`;
-    document.getElementById("card-comidas").href = `categoria.html?tipo=comidas&lang=${lang}`;
-    document.getElementById("card-postres").href = `categoria.html?tipo=postres&lang=${lang}`;
+        // Actualizar enlaces con el idioma
+        document.getElementById("card-bebidas").href = `categoria.html?tipo=bebidas&lang=${lang}`;
+        document.getElementById("card-comidas").href = `categoria.html?tipo=comidas&lang=${lang}`;
+        document.getElementById("card-postres").href = `categoria.html?tipo=postres&lang=${lang}`;
 
-    // Marcar botón activo
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-      btn.classList.toggle("active", btn.dataset.lang === lang);
-    });
-  }
+        // Marcar botón activo
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+          btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+      }
 
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.addEventListener("click", () => applyLang(btn.dataset.lang));
-  });
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+      });
 
-  applyLang(currentLang);
-</script>
+      applyLang(currentLang);
+    </script>
 
 </body>
+
 </html>
