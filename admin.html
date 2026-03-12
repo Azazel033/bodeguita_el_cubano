@@ -474,6 +474,72 @@
     border-top: 1px solid var(--border);
   }
 
+
+  /* ---- IMAGE UPLOADER ---- */
+  .img-upload-area {
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+  }
+  .img-upload-area:hover,
+  .img-upload-area.dragover { border-color: var(--accent); background: rgba(232,197,71,0.05); }
+  .img-upload-area input[type="file"] { display: none; }
+  .img-upload-area .upload-hint {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 6px;
+  }
+  .img-upload-area .upload-hint span { color: var(--accent); font-weight: 600; }
+  .img-preview-wrap {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .img-preview-wrap img {
+    max-width: 100%;
+    max-height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+  .img-preview-wrap .img-remove {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--danger);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .img-upload-status {
+    font-size: 11px;
+    margin-top: 6px;
+    font-family: 'DM Mono', monospace;
+    min-height: 16px;
+  }
+  .img-upload-status.uploading { color: var(--accent); }
+  .img-upload-status.done      { color: var(--success); }
+  .img-upload-status.err       { color: var(--danger); }
+  .img-current-path {
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+
   /* ---- TOAST ---- */
   .toast {
     position: fixed;
@@ -562,7 +628,7 @@
 <div id="admin-panel">
 
   <div class="topbar">
-    <div class="topbar-left">⚡ Admin Panel Bodeguita el cubano</div>
+    <div class="topbar-left">⚡ Admin Panel</div>
     <div class="topbar-right">
       <span class="save-status" id="save-status"></span>
       <button class="btn btn-ghost" onclick="showTab('config')">⚙ Config</button>
@@ -676,8 +742,17 @@
         <input type="text" id="f-moneda" placeholder="€" value="€">
       </div>
       <div class="form-group full">
-        <label>Imagen (ruta)</label>
-        <input type="text" id="f-imagen" placeholder="assets/bebidas/ejemplo.jpg">
+        <label>Imagen</label>
+        <div class="img-upload-area" id="img-upload-area" onclick="document.getElementById('f-imagen-file').click()">
+          <input type="file" id="f-imagen-file" accept="image/*" onchange="handleImageSelect(event)">
+          <div id="img-preview-container">
+            <div style="font-size:28px">🖼️</div>
+            <div class="upload-hint">Haz clic o arrastra una imagen<br><span>JPG, PNG, WEBP</span></div>
+          </div>
+        </div>
+        <div class="img-upload-status" id="img-upload-status"></div>
+        <div class="img-current-path" id="img-current-path"></div>
+        <input type="hidden" id="f-imagen">
       </div>
       <div class="form-group full" id="f-clasificacion-group" style="display:none">
         <label>Clasificación (subcategoría)</label>
@@ -711,11 +786,11 @@
 // =============================================
 //  CONFIGURACIÓN — edita estos valores (solo tú, el desarrollador)
 // =============================================
-const ADMIN_PASSWORD = "bodeguita2026";     // Contraseña de acceso al panel
+const ADMIN_PASSWORD = "cubano2026";     // Contraseña de acceso al panel
 const SECRET_PARAM   = "gestion-menu";  // Parámetro secreto en la URL
 
-const GITHUB_OWNER  = "Azazel033";      // Tu usuario de GitHub
-const GITHUB_REPO   = "bodeguita_el_cubano"; // Nombre del repositorio
+const GITHUB_OWNER  = "TU_USUARIO";      // Tu usuario de GitHub
+const GITHUB_REPO   = "TU_REPOSITORIO"; // Nombre del repositorio
 const GITHUB_BRANCH = "main";            // Rama: main o gh-pages
 const GITHUB_PATH   = "data";           // Carpeta de los JSON
 
@@ -969,7 +1044,7 @@ function openModal(tipo, idx) {
   document.getElementById("f-descripcion").value = item.descripcion || "";
   document.getElementById("f-precio").value      = item.precio      ?? "";
   document.getElementById("f-moneda").value      = item.moneda      || "€";
-  document.getElementById("f-imagen").value      = item.imagen      || "";
+  document.getElementById("f-imagen").value        = item.imagen      || "";
   document.getElementById("f-clasificacion").value = item.clasificacion || "";
   document.getElementById("f-activo").checked      = item.activo      ?? true;
   document.getElementById("f-recomendado").checked = item.recomendado ?? false;
@@ -977,6 +1052,13 @@ function openModal(tipo, idx) {
 
   // Solo mostrar clasificación en bebidas
   document.getElementById("f-clasificacion-group").style.display = tipo === "bebidas" ? "block" : "none";
+
+  // Resetear uploader y mostrar preview si ya tiene imagen
+  resetImageUploader();
+  if (item.imagen && item.imagen.trim()) {
+    showImagePreview(item.imagen);
+    document.getElementById("img-current-path").textContent = item.imagen;
+  }
 
   document.getElementById("modal-overlay").classList.add("open");
   document.getElementById("f-nombre").focus();
@@ -993,15 +1075,27 @@ document.getElementById("modal-overlay").addEventListener("click", e => {
 // =============================================
 //  GUARDAR ITEM
 // =============================================
-function saveItem() {
+async function saveItem() {
   const tipo  = document.getElementById("f-tipo").value;
   const idxRaw = document.getElementById("f-index").value;
   const isEdit = idxRaw !== "";
   const lang   = langs[tipo];
 
+  const nombreVal = document.getElementById("f-nombre").value.trim();
+  if (!nombreVal) { toast("El nombre es obligatorio", "err"); return; }
+
+  // Si hay imagen pendiente de subir, subirla primero
+  const fileInput = document.getElementById("f-imagen-file");
+  if (fileInput.files && fileInput.files[0]) {
+    setStatus("saving", "Subiendo imagen…");
+    const uploadedPath = await uploadImage(fileInput.files[0], tipo, nombreVal);
+    if (!uploadedPath) return; // uploadImage ya muestra el error
+    document.getElementById("f-imagen").value = uploadedPath;
+  }
+
   const item = {
     id:            isEdit ? data[tipo][lang][parseInt(idxRaw)].id : nextId(tipo, lang),
-    nombre:        document.getElementById("f-nombre").value.trim(),
+    nombre:        nombreVal,
     descripcion:   document.getElementById("f-descripcion").value.trim(),
     precio:        parseFloat(document.getElementById("f-precio").value) || 0,
     moneda:        document.getElementById("f-moneda").value.trim() || "€",
@@ -1015,8 +1109,6 @@ function saveItem() {
     item.clasificacion = document.getElementById("f-clasificacion").value.trim();
   }
 
-  if (!item.nombre) { toast("El nombre es obligatorio", "err"); return; }
-
   if (isEdit) {
     data[tipo][lang][parseInt(idxRaw)] = item;
   } else {
@@ -1027,6 +1119,131 @@ function saveItem() {
   renderList(tipo);
   updateCount(tipo);
   commitJSON(tipo, lang);
+}
+
+
+// =============================================
+//  IMAGEN — UPLOADER
+// =============================================
+function slugifyName(str) {
+  return str.toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .substring(0, 40);
+}
+
+function handleImageSelect(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  showImagePreview(url);
+  document.getElementById("img-upload-status").textContent = "Imagen lista para subir al guardar";
+  document.getElementById("img-upload-status").className = "img-upload-status uploading";
+  document.getElementById("img-current-path").textContent = "";
+}
+
+function showImagePreview(src) {
+  const container = document.getElementById("img-preview-container");
+  container.innerHTML = `
+    <div class="img-preview-wrap">
+      <img src="${src}" alt="preview">
+      <button class="img-remove" type="button" onclick="resetImageUploader()" title="Quitar imagen">✕</button>
+    </div>`;
+}
+
+function resetImageUploader() {
+  document.getElementById("f-imagen-file").value = "";
+  document.getElementById("img-preview-container").innerHTML = `
+    <div style="font-size:28px">🖼️</div>
+    <div class="upload-hint">Haz clic o arrastra una imagen<br><span>JPG, PNG, WEBP</span></div>`;
+  document.getElementById("img-upload-status").textContent = "";
+  document.getElementById("img-upload-status").className = "img-upload-status";
+  document.getElementById("img-current-path").textContent = "";
+  document.getElementById("f-imagen").value = "";
+}
+
+// Drag & drop en el área de subida
+document.addEventListener("DOMContentLoaded", () => {
+  const area = document.getElementById("img-upload-area");
+  if (!area) return;
+  area.addEventListener("dragover", e => { e.preventDefault(); area.classList.add("dragover"); });
+  area.addEventListener("dragleave", () => area.classList.remove("dragover"));
+  area.addEventListener("drop", e => {
+    e.preventDefault();
+    area.classList.remove("dragover");
+    const file = e.dataTransfer.files[0];
+    if (file && file.type.startsWith("image/")) {
+      const dt = new DataTransfer();
+      dt.items.add(file);
+      document.getElementById("f-imagen-file").files = dt.files;
+      handleImageSelect({ target: { files: dt.files } });
+    }
+  });
+});
+
+async function uploadImage(file, tipo, nombre) {
+  if (!config.token) {
+    toast("Configura el token antes de subir imágenes", "err"); return null;
+  }
+
+  const ext      = file.name.split(".").pop().toLowerCase() || "jpg";
+  const filename = `${slugifyName(nombre)}-${Date.now()}.${ext}`;
+  const imgPath  = `assets/${tipo}/${filename}`;
+  const branch   = config.branch || "main";
+
+  // Convertir a base64
+  const base64 = await new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload  = () => res(r.result.split(",")[1]);
+    r.onerror = rej;
+    r.readAsDataURL(file);
+  });
+
+  document.getElementById("img-upload-status").textContent = "Subiendo imagen…";
+  document.getElementById("img-upload-status").className = "img-upload-status uploading";
+
+  try {
+    // Comprobar si ya existe (para obtener SHA)
+    let sha = null;
+    const getR = await fetch(
+      `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${imgPath}?ref=${branch}`,
+      { headers: { Authorization: `token ${config.token}` } }
+    );
+    if (getR.ok) sha = (await getR.json()).sha;
+
+    const putR = await fetch(
+      `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${imgPath}`,
+      {
+        method: "PUT",
+        headers: { Authorization: `token ${config.token}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: `Admin: sube imagen ${filename}`,
+          content: base64,
+          branch,
+          ...(sha ? { sha } : {})
+        })
+      }
+    );
+
+    if (putR.ok) {
+      document.getElementById("img-upload-status").textContent = "✓ Imagen subida correctamente";
+      document.getElementById("img-upload-status").className = "img-upload-status done";
+      document.getElementById("img-current-path").textContent = imgPath;
+      return imgPath;
+    } else {
+      const err = await putR.json();
+      document.getElementById("img-upload-status").textContent = `Error: ${err.message}`;
+      document.getElementById("img-upload-status").className = "img-upload-status err";
+      toast(`Error subiendo imagen: ${err.message}`, "err");
+      return null;
+    }
+  } catch(e) {
+    document.getElementById("img-upload-status").textContent = "Error de red";
+    document.getElementById("img-upload-status").className = "img-upload-status err";
+    toast("Error de red al subir imagen", "err");
+    return null;
+  }
 }
 
 function nextId(tipo, lang) {
@@ -1124,9 +1341,6 @@ function setStatus(cls, text) {
   el.textContent = text;
 }
 
-// =============================================
-//  TOAST
-// =============================================
 let toastTimer;
 function toast(msg, type="ok") {
   const el = document.getElementById("toast");
