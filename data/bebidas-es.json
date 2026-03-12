@@ -8,7 +8,7 @@
     "imagen": "",
     "activo": true,
     "recomendado": true,
-    "agotado": false,
+    "agotado": true,
     "clasificacion": "zumos"
   },
   {
