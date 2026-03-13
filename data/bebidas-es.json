@@ -28,12 +28,12 @@
     "nombre": "Fever Tree Ginger Beer",
     "descripcion": "",
     "precio": 3.5,
-    "moneda": "â¬",
+    "moneda": "€",
     "imagen": "",
-    "clasificacion": "refrescos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "refrescos"
   },
   {
     "id": 16,
