@@ -349,15 +349,15 @@
   },
   {
     "id": 42,
-    "nombre": "1/2 litro sangrÃ­a",
+    "nombre": "1/2 litro sangría",
     "descripcion": "",
     "precio": 11,
     "moneda": "â¬",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "vinos y sangrÃ­as"
   },
   {
     "id": 43,
