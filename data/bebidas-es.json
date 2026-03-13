@@ -2098,5 +2098,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cervezas"
+  },
+  {
+    "id": 188,
+    "nombre": "Tequila Jose Cuervo reposado",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "chupitos"
   }
 ]
