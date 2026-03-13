@@ -299,15 +299,14 @@
   },
   {
     "id": 27,
-    "nombre": "Pollo picantón al horno con ensalada y chicharritas",
+    "nombre": "1/2 Pollo al horno con ensalada y chicharritas",
     "descripcion": "Pollo pequeño al horno con ensalada y chicharritas cubanas",
     "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "activo": true,
     "recomendado": false,
-    "agotado": false,
-    "activo": true
+    "agotado": false
   },
   {
     "id": 28,
