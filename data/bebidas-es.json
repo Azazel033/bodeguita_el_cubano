@@ -73,15 +73,15 @@
   },
   {
     "id": 19,
-    "nombre": "Batido de fresa y plÃ¡tano",
+    "nombre": "Batido de fresa y plátano",
     "descripcion": "",
     "precio": 5,
     "moneda": "â¬",
     "imagen": "",
-    "clasificacion": "batidos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "batidos"
   },
   {
     "id": 20,
