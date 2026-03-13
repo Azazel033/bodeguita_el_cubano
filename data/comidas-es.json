@@ -102,10 +102,9 @@
     "precio": 16,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "activo": true,
     "recomendado": false,
-    "agotado": false,
-    "activo": true
+    "agotado": false
   },
   {
     "id": 11,
@@ -277,15 +276,14 @@
   },
   {
     "id": 25,
-    "nombre": "Chuleta de Sajonia con viandas y ensalada",
+    "nombre": "Lomo ahumado con viandas y ensalada",
     "descripcion": "Chuleta ahumada con guarnición de viandas y ensalada",
     "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "activo": true,
     "recomendado": false,
-    "agotado": false,
-    "activo": true
+    "agotado": false
   },
   {
     "id": 26,
