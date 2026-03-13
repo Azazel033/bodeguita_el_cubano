@@ -1356,35 +1356,44 @@ function deleteItem(tipo, idx) {
 // =============================================
 //  GITHUB API — COMMIT
 // =============================================
+
+// Caché local de SHAs para evitar el 409
+const fileShas = {};
+
+async function getFreshSha(path, branch) {
+  const r = await fetch(
+    `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}?ref=${branch}&_=${Date.now()}`,
+    { headers: { Authorization: `token ${config.token}` }, cache: "no-store" }
+  );
+  if (r.ok) {
+    const json = await r.json();
+    return json.sha;
+  }
+  return null;
+}
+
 async function commitJSON(tipo, lang) {
   if (!config.owner || !config.repo || !config.token) {
     toast("⚠ Configura GitHub para guardar en el servidor", "err"); return;
   }
 
   const path    = `${config.path || "data"}/${tipo}-${lang}.json`;
-  const content = btoa(unescape(encodeURIComponent(JSON.stringify(data[tipo][lang], null, 2))));
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(data[tipo][lang], null, 2))));
   const branch  = config.branch || "main";
+  const shaKey  = `${tipo}-${lang}`;
 
   setStatus("saving", "Guardando…");
 
   try {
-    // Obtener SHA actual del archivo
-    const getR = await fetch(
-      `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}?ref=${branch}`,
-      { headers: { Authorization: `token ${config.token}` } }
-    );
-
-    let sha = null;
-    if (getR.ok) {
-      const getJson = await getR.json();
-      sha = getJson.sha;
-    }
+    // Siempre pedir el SHA fresco a GitHub (sin caché) para evitar el 409
+    const sha = await getFreshSha(path, branch);
+    if (sha) fileShas[shaKey] = sha;
 
     const body = {
       message: `Admin: actualiza ${tipo}-${lang}.json`,
-      content,
+      content: encoded,
       branch,
-      ...(sha ? { sha } : {})
+      ...(fileShas[shaKey] ? { sha: fileShas[shaKey] } : {})
     };
 
     const putR = await fetch(
@@ -1400,6 +1409,9 @@ async function commitJSON(tipo, lang) {
     );
 
     if (putR.ok) {
+      // Guardar el SHA nuevo que devuelve GitHub para el próximo commit
+      const putJson = await putR.json();
+      fileShas[shaKey] = putJson.content?.sha || null;
       setStatus("saved", "✓ Guardado");
       toast(`${tipo}-${lang}.json actualizado`, "ok");
       setTimeout(() => setStatus("", ""), 3000);
