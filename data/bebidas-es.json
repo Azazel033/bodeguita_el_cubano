@@ -1,17 +1,5 @@
 [
   {
-    "id": 6,
-    "nombre": "Agua sin gas Panna",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "refrescos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 7,
     "nombre": "Agua con gas Pellegrino",
     "descripcion": "",
