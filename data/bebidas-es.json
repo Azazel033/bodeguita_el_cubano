@@ -61,15 +61,15 @@
   },
   {
     "id": 18,
-    "nombre": "Batido de plÃ¡tano",
+    "nombre": "Batido de plátano",
     "descripcion": "",
     "precio": 5,
-    "moneda": "â¬",
+    "moneda": "€",
     "imagen": "",
-    "clasificacion": "batidos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "batidos"
   },
   {
     "id": 19,
