@@ -1,17 +1,5 @@
 [
   {
-    "id": 10,
-    "nombre": "Aquarius",
-    "descripcion": "",
-    "precio": 3.5,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "refrescos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 11,
     "nombre": "Red Bull",
     "descripcion": "",
