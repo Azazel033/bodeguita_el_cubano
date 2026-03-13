@@ -2134,5 +2134,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "chupitos"
+  },
+  {
+    "id": 191,
+    "nombre": "Chupito ron",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": ""
   }
 ]
