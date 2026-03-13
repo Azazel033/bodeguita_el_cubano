@@ -231,13 +231,13 @@
     "id": 32,
     "nombre": "Desperados",
     "descripcion": "",
-    "precio": 4,
-    "moneda": "â¬",
+    "precio": 4.5,
+    "moneda": "€",
     "imagen": "",
-    "clasificacion": "cervezas",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cervezas"
   },
   {
     "id": 33,
