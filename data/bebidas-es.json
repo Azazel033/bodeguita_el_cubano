@@ -1,17 +1,5 @@
 [
   {
-    "id": 11,
-    "nombre": "Red Bull",
-    "descripcion": "",
-    "precio": 3.5,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "energÃ©ticos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 12,
     "nombre": "Fever Tree",
     "descripcion": "",
