@@ -2019,13 +2019,13 @@
     "id": 181,
     "nombre": "Latte Macchiato",
     "descripcion": "",
-    "precio": 6,
-    "moneda": "â¬",
+    "precio": 4.5,
+    "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafÃ©s",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cafÃ©s"
   },
   {
     "id": 182,
