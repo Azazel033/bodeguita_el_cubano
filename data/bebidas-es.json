@@ -157,15 +157,15 @@
   },
   {
     "id": 26,
-    "nombre": "CaÃ±a / Shandy / Clara Amstel",
+    "nombre": "Caña / Shandy / Clara Amstel",
     "descripcion": "",
     "precio": 3,
-    "moneda": "â¬",
+    "moneda": "€",
     "imagen": "",
-    "clasificacion": "cervezas",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cervezas"
   },
   {
     "id": 27,
