@@ -2074,5 +2074,17 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
+  },
+  {
+    "id": 186,
+    "nombre": "Tónica fever",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "refrescos"
   }
 ]
