@@ -1767,13 +1767,13 @@
     "id": 160,
     "nombre": "Licor 43",
     "descripcion": "",
-    "precio": 7,
-    "moneda": "â¬",
+    "precio": 9.5,
+    "moneda": "€",
     "imagen": "",
-    "clasificacion": "licores",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "licores"
   },
   {
     "id": 161,
