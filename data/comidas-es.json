@@ -324,12 +324,11 @@
     "id": 29,
     "nombre": "Plato vegetariano",
     "descripcion": "Verduras frescas, yuca frita o con mojo, tostones",
-    "precio": 15.5,
+    "precio": 18,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "activo": true,
     "recomendado": false,
-    "agotado": false,
-    "activo": true
+    "agotado": false
   }
 ]
