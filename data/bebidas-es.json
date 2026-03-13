@@ -1,17 +1,5 @@
 [
   {
-    "id": 5,
-    "nombre": "Tomate",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "zumos",
-    "recomendado": false,
-    "agotado": true,
-    "activo": true
-  },
-  {
     "id": 6,
     "nombre": "Agua sin gas Panna",
     "descripcion": "",
