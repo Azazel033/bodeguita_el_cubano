@@ -313,15 +313,15 @@
   },
   {
     "id": 39,
-    "nombre": "Copa de sangrÃ­a",
+    "nombre": "Copa de sangría",
     "descripcion": "",
     "precio": 6,
     "moneda": "â¬",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "vinos y sangrÃ­as"
   },
   {
     "id": 40,
