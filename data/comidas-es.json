@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Yuca con mojo",
-    "descripcion": "Acompañamiento clásico cubano",
-    "precio": 6,
-    "moneda": "€",
-    "imagen": "",
-    "clasificacion": "",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 2,
     "nombre": "Yuca frita",
     "descripcion": "Acompañamiento clásico cubano",
