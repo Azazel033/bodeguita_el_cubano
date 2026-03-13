@@ -337,15 +337,15 @@
   },
   {
     "id": 41,
-    "nombre": "Copa sangrÃ­a cava",
+    "nombre": "Copa sangría cava",
     "descripcion": "",
     "precio": 7.5,
     "moneda": "â¬",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "vinos y sangrÃ­as"
   },
   {
     "id": 42,
