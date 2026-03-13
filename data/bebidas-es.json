@@ -325,15 +325,15 @@
   },
   {
     "id": 40,
-    "nombre": "Copa sangrÃ­a blanca",
+    "nombre": "Copa sangría blanca",
     "descripcion": "",
     "precio": 6,
     "moneda": "â¬",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "vinos y sangrÃ­as"
   },
   {
     "id": 41,
