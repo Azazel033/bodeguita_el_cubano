@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Fresh orange juice",
-    "descripcion": "",
-    "precio": 4,
-    "moneda": "€",
-    "imagen": "",
-    "clasificacion": "juices",
-    "recomendado": false,
-    "agotado": false,
-    "activo": false
-  },
-  {
     "id": 2,
     "nombre": "Peach juice",
     "descripcion": "",
