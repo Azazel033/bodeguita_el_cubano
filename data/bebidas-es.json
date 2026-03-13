@@ -2110,5 +2110,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "chupitos"
+  },
+  {
+    "id": 189,
+    "nombre": "Chupito vodka",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "chupitos"
   }
 ]
