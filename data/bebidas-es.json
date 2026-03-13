@@ -1,41 +1,5 @@
 [
   {
-    "id": 2,
-    "nombre": "MelocotÃ³n",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "zumos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": false
-  },
-  {
-    "id": 3,
-    "nombre": "PiÃ±a",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "zumos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 4,
-    "nombre": "Naranja",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "zumos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 5,
     "nombre": "Tomate",
     "descripcion": "",
@@ -44,7 +8,7 @@
     "imagen": "",
     "clasificacion": "zumos",
     "recomendado": false,
-    "agotado": false,
+    "agotado": true,
     "activo": true
   },
   {
