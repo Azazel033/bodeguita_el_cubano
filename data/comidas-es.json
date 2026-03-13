@@ -330,5 +330,16 @@
     "activo": true,
     "recomendado": false,
     "agotado": false
+  },
+  {
+    "id": 30,
+    "nombre": "Yuca con mojo",
+    "descripcion": "Yuca cocida con mojo",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false
   }
 ]
