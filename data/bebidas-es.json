@@ -1,17 +1,5 @@
 [
   {
-    "id": 8,
-    "nombre": "Cocacola, Cola Zero, Fanta naranja/limÃ³n, Sprite",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "refrescos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 9,
     "nombre": "Nestea maracuyÃ¡",
     "descripcion": "",
