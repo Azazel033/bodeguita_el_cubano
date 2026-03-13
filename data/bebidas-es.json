@@ -1,17 +1,5 @@
 [
   {
-    "id": 12,
-    "nombre": "Fever Tree",
-    "descripcion": "",
-    "precio": 3.5,
-    "moneda": "â¬",
-    "imagen": "",
-    "clasificacion": "refrescos",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 13,
     "nombre": "Fever Tree Mediterranean",
     "descripcion": "",
