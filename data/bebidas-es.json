@@ -2146,5 +2146,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": ""
+  },
+  {
+    "id": 192,
+    "nombre": "Chupito Ron Premium",
+    "descripcion": "",
+    "precio": 8,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "chupitos"
   }
 ]
