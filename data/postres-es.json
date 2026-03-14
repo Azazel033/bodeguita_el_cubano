@@ -1,16 +1,5 @@
 [
   {
-    "id": 2,
-    "nombre": "Flan",
-    "descripcion": "Flan casero de la abuela",
-    "precio": 4,
-    "moneda": "€",
-    "imagen": "",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
     "id": 1,
     "nombre": "Helado",
     "descripcion": "Helado artesanal de la casa",
@@ -26,6 +15,17 @@
     "nombre": "Copa Lolita",
     "descripcion": "Postre especial de la casa",
     "precio": 6,
+    "moneda": "€",
+    "imagen": "",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Flan",
+    "descripcion": "Flan casero de la abuela",
+    "precio": 4,
     "moneda": "€",
     "imagen": "",
     "recomendado": false,
