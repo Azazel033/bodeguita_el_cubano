@@ -126,7 +126,7 @@
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "energydrinks",
+    "clasificacion": "energy drinks",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -278,7 +278,7 @@
   {
     "id": 24,
     "nombre": "Palma Cristal",
-    "descripcion": "Cerveza cubana",
+    "descripcion": "",
     "precio": 4.5,
     "moneda": "€",
     "imagen": "",
@@ -290,7 +290,7 @@
   {
     "id": 25,
     "nombre": "Cubanero",
-    "descripcion": "Cerveza cubana",
+    "descripcion": "",
     "precio": 4.5,
     "moneda": "€",
     "imagen": "",
@@ -386,7 +386,7 @@
   {
     "id": 33,
     "nombre": "Heineken 0,0",
-    "descripcion": "Sin alcohol",
+    "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
@@ -589,7 +589,7 @@
   },
   {
     "id": 50,
-    "nombre": "Schokoladen-Brownie-Likör-Shot",
+    "nombre": "Schokoladen-Brownie-Likör",
     "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
@@ -614,19 +614,19 @@
   {
     "id": 52,
     "nombre": "Klassischer Mojito",
-    "descripcion": "Ron blanco, lima, hierbabuena y azúcar de caña",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
-    "imagen": "assets/bebidas/klassischer-mojito-1773333063680.jpeg",
-    "activo": true,
+    "imagen": "",
+    "clasificacion": "cocktails",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "cocktails"
+    "activo": true
   },
   {
     "id": 53,
     "nombre": "Mojito mit frischen Früchten",
-    "descripcion": "Mojito con fruta fresca de temporada",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -638,7 +638,7 @@
   {
     "id": 54,
     "nombre": "Klassischer Daiquiri",
-    "descripcion": "Ron blanco, lima y azúcar",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -650,7 +650,7 @@
   {
     "id": 55,
     "nombre": "Daiquiri mit frischen Früchten",
-    "descripcion": "Daiquirí con fruta fresca de temporada",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -662,7 +662,7 @@
   {
     "id": 56,
     "nombre": "Klassische / Frozen Caipirinha",
-    "descripcion": "Cachaça, lima y azúcar moreno",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -674,7 +674,7 @@
   {
     "id": 57,
     "nombre": "Klassische Caipiroska",
-    "descripcion": "Vodka, lima y azúcar moreno",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -686,7 +686,7 @@
   {
     "id": 58,
     "nombre": "Caipiroska mit Früchten",
-    "descripcion": "Caipiroska con fruta natural de temporada",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -698,7 +698,7 @@
   {
     "id": 59,
     "nombre": "Caipirisima mit Früchten",
-    "descripcion": "Ron, lima, azúcar y fruta natural",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -710,7 +710,7 @@
   {
     "id": 60,
     "nombre": "Piña Colada",
-    "descripcion": "Ron, crema de coco y piña fresca",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -722,7 +722,7 @@
   {
     "id": 61,
     "nombre": "Espresso Martini",
-    "descripcion": "Vodka, licor de café y espresso",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -734,7 +734,7 @@
   {
     "id": 62,
     "nombre": "Pomada Frappé",
-    "descripcion": "Gin Xoriguer con limón frappé",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -746,7 +746,7 @@
   {
     "id": 63,
     "nombre": "Mai Thai",
-    "descripcion": "Ron, triple seco, lima y almendra",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -758,7 +758,7 @@
   {
     "id": 64,
     "nombre": "Tequila Sunrise",
-    "descripcion": "Tequila, zumo de naranja y granadina",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -770,7 +770,7 @@
   {
     "id": 65,
     "nombre": "Sex on the Beach",
-    "descripcion": "Vodka, melocotón, zumo de naranja y arándanos",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -782,7 +782,7 @@
   {
     "id": 66,
     "nombre": "Klassische Margarita",
-    "descripcion": "Tequila, triple seco y lima",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -794,7 +794,7 @@
   {
     "id": 67,
     "nombre": "Frozen Margarita",
-    "descripcion": "Margarita clásica en versión frozen",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -806,7 +806,7 @@
   {
     "id": 68,
     "nombre": "San Francisco",
-    "descripcion": "Zumos tropicales y granadina, sin alcohol",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -818,7 +818,7 @@
   {
     "id": 69,
     "nombre": "Cosmopolitan",
-    "descripcion": "Vodka, Cointreau, lima y arándanos",
+    "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
@@ -830,7 +830,7 @@
   {
     "id": 70,
     "nombre": "White Russian",
-    "descripcion": "Vodka, Kahlúa y nata",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -842,7 +842,7 @@
   {
     "id": 71,
     "nombre": "Tropical",
-    "descripcion": "Combinado tropical de la casa",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -854,7 +854,7 @@
   {
     "id": 72,
     "nombre": "Ron Collins",
-    "descripcion": "Ron, limón, azúcar y soda",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -866,7 +866,7 @@
   {
     "id": 73,
     "nombre": "Tom Collins",
-    "descripcion": "Gin, limón, azúcar y soda",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -878,7 +878,7 @@
   {
     "id": 74,
     "nombre": "Bloody Mary",
-    "descripcion": "Vodka, zumo de tomate y especias",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -890,7 +890,7 @@
   {
     "id": 75,
     "nombre": "Hugo",
-    "descripcion": "Cava, flor de saúco, lima y menta",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -902,7 +902,7 @@
   {
     "id": 76,
     "nombre": "Negroni",
-    "descripcion": "Gin, Campari y vermut rojo",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -914,7 +914,7 @@
   {
     "id": 77,
     "nombre": "Screwdriver mit frischem Orangensaft",
-    "descripcion": "Vodka y zumo de naranja natural",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -926,7 +926,7 @@
   {
     "id": 78,
     "nombre": "Aperol Spritz",
-    "descripcion": "Aperol, cava y naranja",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -938,7 +938,7 @@
   {
     "id": 79,
     "nombre": "Limoncello Spritz",
-    "descripcion": "Limoncello, cava y limón",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -950,7 +950,7 @@
   {
     "id": 80,
     "nombre": "Martini Spritz",
-    "descripcion": "Martini, cava y naranja",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -962,11 +962,11 @@
   {
     "id": 81,
     "nombre": "Alkoholfreier San Francisco",
-    "descripcion": "Zumos tropicales y granadina",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "alkoholfrei",
+    "clasificacion": "alkoholfreie cocktails",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -974,11 +974,11 @@
   {
     "id": 82,
     "nombre": "Alkoholfreier Mojito",
-    "descripcion": "Lima, hierbabuena, azúcar y soda",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "alkoholfrei",
+    "clasificacion": "alkoholfreie cocktails",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -986,11 +986,11 @@
   {
     "id": 83,
     "nombre": "Alkoholfreier Frucht-Mojito",
-    "descripcion": "Lima, hierbabuena, fruta y soda",
+    "descripcion": "",
     "precio": 9,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "alkoholfrei",
+    "clasificacion": "alkoholfreie cocktails",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -998,11 +998,11 @@
   {
     "id": 84,
     "nombre": "Alkoholfreie Caipirinha",
-    "descripcion": "Lima, azúcar y soda",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "alkoholfrei",
+    "clasificacion": "alkoholfreie cocktails",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -1010,11 +1010,11 @@
   {
     "id": 85,
     "nombre": "Alkoholfreier Daiquiri",
-    "descripcion": "Lima, azúcar y fruta",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "alkoholfrei",
+    "clasificacion": "alkoholfreie cocktails",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -1022,11 +1022,11 @@
   {
     "id": 86,
     "nombre": "Alkoholfreier Frucht-Daiquiri",
-    "descripcion": "Lima, fruta natural y azúcar",
+    "descripcion": "",
     "precio": 9,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "alkoholfrei",
+    "clasificacion": "alkoholfreie cocktails",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -1034,11 +1034,11 @@
   {
     "id": 87,
     "nombre": "Alkoholfreie Piña Colada",
-    "descripcion": "Crema de coco, piña y zumos tropicales",
+    "descripcion": "",
     "precio": 9,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "alkoholfrei",
+    "clasificacion": "alkoholfreie cocktails",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -1214,7 +1214,7 @@
   {
     "id": 102,
     "nombre": "Xoriguer",
-    "descripcion": "Gin menorquín",
+    "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
     "imagen": "",
@@ -2174,7 +2174,7 @@
   {
     "id": 182,
     "nombre": "Irish Coffee",
-    "descripcion": "Café, whisky y nata",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
@@ -2209,8 +2209,8 @@
   },
   {
     "id": 185,
-    "nombre": "Kräutertees",
-    "descripcion": "Menta poleo, manzanilla y té negro",
+    "nombre": "Kräutertees (Pfefferminze, Kamille, Schwarztee)",
+    "descripcion": "",
     "precio": 1.8,
     "moneda": "€",
     "imagen": "",

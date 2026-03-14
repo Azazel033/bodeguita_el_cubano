@@ -476,6 +476,29 @@
 
 
 
+
+  /* ---- DRAG & DROP ---- */
+  .drag-handle {
+    cursor: grab;
+    color: var(--muted);
+    font-size: 16px;
+    padding: 0 6px;
+    flex-shrink: 0;
+    user-select: none;
+    transition: color 0.15s;
+    line-height: 1;
+  }
+  .drag-handle:hover { color: var(--text-dim); }
+  .item-row.dragging {
+    opacity: 0.4;
+    border-style: dashed;
+  }
+  .item-row.drag-over {
+    border-color: var(--accent);
+    background: rgba(232,197,71,0.06);
+  }
+  .item-row { cursor: default; }
+
   /* ---- BUSCADOR ---- */
   .search-wrap {
     position: relative;
@@ -833,9 +856,9 @@
         <div class="img-current-path" id="img-current-path"></div>
         <input type="hidden" id="f-imagen">
       </div>
-      <div class="form-group full" id="f-clasificacion-group" style="display:none">
+      <div class="form-group full" id="f-clasificacion-group">
         <label>Clasificación (subcategoría)</label>
-        <input type="text" id="f-clasificacion" placeholder="cocktails, cervezas, rones...">
+        <input type="text" id="f-clasificacion" placeholder="ej: entrantes, principales, postres...">
       </div>
       <div class="form-group full">
         <div class="toggle-row">
@@ -868,10 +891,11 @@
 const ADMIN_PASSWORD = "bodeguita2026";     // Contraseña de acceso al panel
 const SECRET_PARAM   = "gestion-menu";  // Parámetro secreto en la URL
 
-const GITHUB_OWNER  = "Azazel033";      // Tu usuario de GitHub
+const GITHUB_OWNER  = "Azazel033";      
 const GITHUB_REPO   = "bodeguita_el_cubano"; // Nombre del repositorio
 const GITHUB_BRANCH = "main";            // Rama: main o gh-pages
 const GITHUB_PATH   = "data";           // Carpeta de los JSON
+
 
 // =============================================
 //  ESTADO
@@ -1014,6 +1038,14 @@ function renderList(tipo) {
     const row = document.createElement("div");
     row.className = "item-row" + (!item.activo ? " inactive" : "") + (item.agotado ? " agotado" : "");
 
+    // Handle drag
+    const handle = document.createElement("div");
+    handle.className = "drag-handle";
+    handle.title = "Arrastrar para reordenar";
+    handle.textContent = "⠿";
+    handle.draggable = false; // el drag lo ponemos en la row
+    row.appendChild(handle);
+
     // Miniatura
     let thumb;
     if (item.imagen && item.imagen.trim()) {
@@ -1076,6 +1108,41 @@ function renderList(tipo) {
 
     actions.append(btnActivo, btnAgotado, btnEdit, btnDel);
     row.appendChild(actions);
+
+    // Drag & drop
+    row.draggable = true;
+    row.dataset.idx = idx;
+
+    row.addEventListener("dragstart", e => {
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", idx);
+      setTimeout(() => row.classList.add("dragging"), 0);
+    });
+    row.addEventListener("dragend", () => {
+      row.classList.remove("dragging");
+      document.querySelectorAll(`#list-${tipo} .item-row`).forEach(r => r.classList.remove("drag-over"));
+    });
+    row.addEventListener("dragover", e => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+      document.querySelectorAll(`#list-${tipo} .item-row`).forEach(r => r.classList.remove("drag-over"));
+      row.classList.add("drag-over");
+    });
+    row.addEventListener("dragleave", () => row.classList.remove("drag-over"));
+    row.addEventListener("drop", e => {
+      e.preventDefault();
+      row.classList.remove("drag-over");
+      const fromIdx = parseInt(e.dataTransfer.getData("text/plain"));
+      const toIdx   = parseInt(row.dataset.idx);
+      if (fromIdx === toIdx) return;
+      const lang = langs[tipo];
+      const arr  = data[tipo][lang];
+      const [moved] = arr.splice(fromIdx, 1);
+      arr.splice(toIdx, 0, moved);
+      renderList(tipo);
+      commitJSON(tipo, lang);
+    });
+
     list.appendChild(row);
   });
 }
@@ -1129,8 +1196,8 @@ function openModal(tipo, idx) {
   document.getElementById("f-recomendado").checked = item.recomendado ?? false;
   document.getElementById("f-agotado").checked     = item.agotado     ?? false;
 
-  // Solo mostrar clasificación en bebidas
-  document.getElementById("f-clasificacion-group").style.display = tipo === "bebidas" ? "block" : "none";
+  // Mostrar campo clasificación siempre
+  document.getElementById("f-clasificacion-group").style.display = "block";
 
   // Resetear uploader y mostrar preview si ya tiene imagen
   resetImageUploader();
@@ -1184,9 +1251,7 @@ async function saveItem() {
     agotado:       document.getElementById("f-agotado").checked
   };
 
-  if (tipo === "bebidas") {
-    item.clasificacion = document.getElementById("f-clasificacion").value.trim();
-  }
+  item.clasificacion = document.getElementById("f-clasificacion").value.trim();
 
   if (isEdit) {
     data[tipo][lang][parseInt(idxRaw)] = item;

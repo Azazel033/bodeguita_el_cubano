@@ -2,11 +2,11 @@
   {
     "id": 1,
     "nombre": "Yuca with mojo",
-    "descripcion": "Classic Cuban side dish",
+    "descripcion": "",
     "precio": 6,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -14,11 +14,11 @@
   {
     "id": 2,
     "nombre": "Fried yuca",
-    "descripcion": "Classic Cuban side dish",
+    "descripcion": "",
     "precio": 6,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -26,11 +26,11 @@
   {
     "id": 3,
     "nombre": "Tostones",
-    "descripcion": "Twice-fried green plantain, crispy outside",
+    "descripcion": "",
     "precio": 6,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -38,11 +38,11 @@
   {
     "id": 4,
     "nombre": "Tamales",
-    "descripcion": "Traditional Cuban recipe",
+    "descripcion": "",
     "precio": 7,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -50,11 +50,11 @@
   {
     "id": 5,
     "nombre": "Fried pork",
-    "descripcion": "Cuban-style fried pork",
+    "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -62,11 +62,11 @@
   {
     "id": 6,
     "nombre": "Cuban hot dog",
-    "descripcion": "Hot dog bodeguita style",
+    "descripcion": "",
     "precio": 13,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -74,11 +74,11 @@
   {
     "id": 7,
     "nombre": "Ropa vieja",
-    "descripcion": "Shredded beef stewed in Cuban sofrito",
+    "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -86,11 +86,11 @@
   {
     "id": 8,
     "nombre": "Congrí rice",
-    "descripcion": "Rice with black beans, bay leaf and cumin",
+    "descripcion": "",
     "precio": 4.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -98,11 +98,11 @@
   {
     "id": 9,
     "nombre": "Bread with oil and ropa vieja",
-    "descripcion": "Bread with olive oil and Cuban ropa vieja",
+    "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -110,11 +110,11 @@
   {
     "id": 10,
     "nombre": "Prawn enchilado",
-    "descripcion": "Prawns in spicy creole sauce with tomato and pepper",
+    "descripcion": "",
     "precio": 16,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "cuban cuisine",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -122,11 +122,11 @@
   {
     "id": 11,
     "nombre": "Bread and aioli",
-    "descripcion": "To share",
+    "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -134,11 +134,11 @@
   {
     "id": 12,
     "nombre": "Bread with oil and ham",
-    "descripcion": "Bread with olive oil and ham",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -146,11 +146,11 @@
   {
     "id": 13,
     "nombre": "Bread with oil and Mahón cheese",
-    "descripcion": "Bread with olive oil and Mahón cheese",
+    "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -158,11 +158,11 @@
   {
     "id": 14,
     "nombre": "Bread with oil, ham and cheese",
-    "descripcion": "Bread with olive oil, ham and cheese",
+    "descripcion": "",
     "precio": 11.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -170,11 +170,11 @@
   {
     "id": 15,
     "nombre": "Chicken wings",
-    "descripcion": "Crispy oven-baked chicken wings",
+    "descripcion": "",
     "precio": 7.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -182,11 +182,11 @@
   {
     "id": 16,
     "nombre": "Patatas bravas",
-    "descripcion": "With spicy sauce and aioli",
+    "descripcion": "",
     "precio": 5.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -194,11 +194,11 @@
   {
     "id": 17,
     "nombre": "Ham croquettes",
-    "descripcion": "Homemade Iberian ham croquettes",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -206,11 +206,11 @@
   {
     "id": 18,
     "nombre": "French fries",
-    "descripcion": "Crispy french fries",
+    "descripcion": "",
     "precio": 4.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -218,11 +218,11 @@
   {
     "id": 19,
     "nombre": "Garlic prawns",
-    "descripcion": "Prawns sautéed in olive oil and garlic",
+    "descripcion": "",
     "precio": 15,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -230,11 +230,11 @@
   {
     "id": 20,
     "nombre": "Andalusian calamari",
-    "descripcion": "Battered calamari Andalusian style",
+    "descripcion": "",
     "precio": 16,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -242,23 +242,23 @@
   {
     "id": 21,
     "nombre": "Chicken nuggets",
-    "descripcion": "Crispy chicken nuggets",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 22,
-    "nombre": "Hotdog with fried viandas",
-    "descripcion": "Hot dog with Cuban fried viandas",
+    "nombre": "Hot dog with fried viandas",
+    "descripcion": "",
     "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -266,11 +266,11 @@
   {
     "id": 23,
     "nombre": "Vegetable salad",
-    "descripcion": "Fresh seasonal salad",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -278,11 +278,11 @@
   {
     "id": 24,
     "nombre": "Prawn cocktail",
-    "descripcion": "Prawns with rose sauce and avocado",
+    "descripcion": "",
     "precio": 10.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "to share",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -290,23 +290,23 @@
   {
     "id": 25,
     "nombre": "Saxony chop with viandas and salad",
-    "descripcion": "Smoked chop with viandas and salad",
+    "descripcion": "",
     "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "mains",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 26,
-    "nombre": "Herb chicken breast with viandas",
-    "descripcion": "Grilled herb chicken breast with viandas and salad",
+    "nombre": "Herb chicken breast with viandas and salad",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "mains",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -314,11 +314,11 @@
   {
     "id": 27,
     "nombre": "Roasted poussin with salad and chicharritas",
-    "descripcion": "Oven-roasted poussin with salad and Cuban chicharritas",
+    "descripcion": "",
     "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "mains",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -326,11 +326,11 @@
   {
     "id": 28,
     "nombre": "Battered hake with salad",
-    "descripcion": "Tempura hake with fresh salad",
+    "descripcion": "",
     "precio": 15.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "mains",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -342,7 +342,7 @@
     "precio": 15.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "",
+    "clasificacion": "mains",
     "recomendado": false,
     "agotado": false,
     "activo": true

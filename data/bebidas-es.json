@@ -1,15 +1,159 @@
 [
   {
+    "id": 1,
+    "nombre": "Zumo natural de naranja",
+    "descripcion": "",
+    "precio": 4,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "zumos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Melocotón",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "zumos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Piña",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "zumos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Naranja",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "zumos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Tomate",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "zumos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Agua sin gas Panna",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "refrescos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 7,
+    "nombre": "Agua con gas Pellegrino",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "refrescos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 8,
+    "nombre": "Cocacola, Cola Zero, Fanta naranja/limón, Sprite",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "refrescos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 9,
+    "nombre": "Nestea maracuyá",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "refrescos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 10,
+    "nombre": "Aquarius",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "refrescos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 11,
+    "nombre": "Red Bull",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "energéticos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
+    "id": 12,
+    "nombre": "Fever Tree",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "refrescos",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
     "id": 13,
     "nombre": "Fever Tree Mediterranean",
     "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "refrescos",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "refrescos"
+    "activo": true
   },
   {
     "id": 14,
@@ -18,10 +162,10 @@
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "refrescos",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "refrescos"
+    "activo": true
   },
   {
     "id": 15,
@@ -30,10 +174,10 @@
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "refrescos",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "refrescos"
+    "activo": true
   },
   {
     "id": 16,
@@ -42,10 +186,10 @@
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "refrescos",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "refrescos"
+    "activo": true
   },
   {
     "id": 17,
@@ -66,10 +210,10 @@
     "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "batidos",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "batidos"
+    "activo": true
   },
   {
     "id": 19,
@@ -78,10 +222,10 @@
     "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "batidos",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "batidos"
+    "activo": true
   },
   {
     "id": 20,
@@ -134,7 +278,7 @@
   {
     "id": 24,
     "nombre": "Palma Cristal",
-    "descripcion": "Cerveza cubana",
+    "descripcion": "",
     "precio": 4.5,
     "moneda": "€",
     "imagen": "",
@@ -146,7 +290,7 @@
   {
     "id": 25,
     "nombre": "Cubanero",
-    "descripcion": "Cerveza cubana",
+    "descripcion": "",
     "precio": 4.5,
     "moneda": "€",
     "imagen": "",
@@ -162,10 +306,10 @@
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "cervezas",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "cervezas"
+    "activo": true
   },
   {
     "id": 27,
@@ -231,18 +375,18 @@
     "id": 32,
     "nombre": "Desperados",
     "descripcion": "",
-    "precio": 4.5,
+    "precio": 4,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "cervezas",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "cervezas"
+    "activo": true
   },
   {
     "id": 33,
     "nombre": "Heineken 0,0",
-    "descripcion": "Sin alcohol",
+    "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
@@ -258,7 +402,7 @@
     "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -270,7 +414,7 @@
     "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -282,7 +426,7 @@
     "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -294,7 +438,7 @@
     "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -306,7 +450,7 @@
     "precio": 7,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -318,10 +462,10 @@
     "precio": 6,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "vinos y sangrÃ­as"
+    "activo": true
   },
   {
     "id": 40,
@@ -330,10 +474,10 @@
     "precio": 6,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "vinos y sangrÃ­as"
+    "activo": true
   },
   {
     "id": 41,
@@ -342,10 +486,10 @@
     "precio": 7.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "vinos y sangrÃ­as"
+    "activo": true
   },
   {
     "id": 42,
@@ -354,74 +498,74 @@
     "precio": 11,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "vinos y sangrÃ­as"
+    "activo": true
   },
   {
     "id": 43,
-    "nombre": "1/2 litro sangrÃ­a blanca",
+    "nombre": "1/2 litro sangría blanca",
     "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 44,
-    "nombre": "1/2 litro sangrÃ­a cava",
+    "nombre": "1/2 litro sangría cava",
     "descripcion": "",
     "precio": 13,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 45,
-    "nombre": "Litro sangrÃ­a",
+    "nombre": "Litro sangría",
     "descripcion": "",
     "precio": 20,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 46,
-    "nombre": "Litro sangrÃ­a blanca",
+    "nombre": "Litro sangría blanca",
     "descripcion": "",
     "precio": 20,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 47,
-    "nombre": "Litro sangrÃ­a cava",
+    "nombre": "Litro sangría cava",
     "descripcion": "",
     "precio": 22,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "vinos y sangrÃ­as",
+    "clasificacion": "vinos y sangrías",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 48,
-    "nombre": "Tequila Peligro / Katrina (fresa, mango, melÃ³n, sandÃ­a)",
+    "nombre": "Tequila Peligro / Katrina (fresa, mango, melón, sandía)",
     "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
@@ -447,17 +591,17 @@
     "id": 50,
     "nombre": "Licor brownie de chocolate",
     "descripcion": "",
-    "precio": 4,
+    "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "chupitos",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "chupitos"
+    "activo": true
   },
   {
     "id": 51,
-    "nombre": "JÃ¤germeister",
+    "nombre": "Jägermeister",
     "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
@@ -469,20 +613,20 @@
   },
   {
     "id": 52,
-    "nombre": "Mojito clÃ¡sico",
-    "descripcion": "Ron blanco, lima, hierbabuena y azÃºcar de caÃ±a",
+    "nombre": "Mojito clásico",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
-    "imagen": "assets/bebidas/mojito-clasico-1773333035186.jpeg",
-    "activo": true,
+    "imagen": "",
+    "clasificacion": "cocktails",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "cocktails"
+    "activo": true
   },
   {
     "id": 53,
     "nombre": "Mojito de fruta natural",
-    "descripcion": "Mojito con fruta fresca de temporada",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -493,8 +637,8 @@
   },
   {
     "id": 54,
-    "nombre": "DaiquirÃ­ clÃ¡sico",
-    "descripcion": "Ron blanco, lima y azÃºcar",
+    "nombre": "Daiquirí clásico",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -505,8 +649,8 @@
   },
   {
     "id": 55,
-    "nombre": "DaiquirÃ­ de fruta natural",
-    "descripcion": "DaiquirÃ­ con fruta fresca de temporada",
+    "nombre": "Daiquirí de fruta natural",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -517,8 +661,8 @@
   },
   {
     "id": 56,
-    "nombre": "Caipirinha clÃ¡sica / frozen",
-    "descripcion": "CachaÃ§a, lima y azÃºcar moreno",
+    "nombre": "Caipirinha clásica / frozen",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -529,8 +673,8 @@
   },
   {
     "id": 57,
-    "nombre": "Caipiroska clÃ¡sica",
-    "descripcion": "Vodka, lima y azÃºcar moreno",
+    "nombre": "Caipiroska clásica",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -542,7 +686,7 @@
   {
     "id": 58,
     "nombre": "Caipiroska de fruta",
-    "descripcion": "Caipiroska con fruta natural de temporada",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -554,7 +698,7 @@
   {
     "id": 59,
     "nombre": "Caipirisima de fruta",
-    "descripcion": "Ron, lima, azÃºcar y fruta natural",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -565,8 +709,8 @@
   },
   {
     "id": 60,
-    "nombre": "PiÃ±a colada",
-    "descripcion": "Ron, crema de coco y piÃ±a fresca",
+    "nombre": "Piña colada",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -578,7 +722,7 @@
   {
     "id": 61,
     "nombre": "Espresso martini",
-    "descripcion": "Vodka, licor de cafÃ© y espresso",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -589,8 +733,8 @@
   },
   {
     "id": 62,
-    "nombre": "Pomada FrappÃ©",
-    "descripcion": "Gin Xoriguer con limÃ³n frappÃ©",
+    "nombre": "Pomada Frappé",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -602,7 +746,7 @@
   {
     "id": 63,
     "nombre": "Mai Thai",
-    "descripcion": "Ron, triple seco, lima y almendra",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -614,7 +758,7 @@
   {
     "id": 64,
     "nombre": "Tequila Sunrise",
-    "descripcion": "Tequila, zumo de naranja y granadina",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -626,7 +770,7 @@
   {
     "id": 65,
     "nombre": "Sex on the Beach",
-    "descripcion": "Vodka, melocotÃ³n, zumo de naranja y arÃ¡ndanos",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -637,8 +781,8 @@
   },
   {
     "id": 66,
-    "nombre": "Margarita clÃ¡sica",
-    "descripcion": "Tequila, triple seco y lima",
+    "nombre": "Margarita clásica",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -650,7 +794,7 @@
   {
     "id": 67,
     "nombre": "Margarita frozen",
-    "descripcion": "Margarita clÃ¡sica en versiÃ³n frozen",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -662,7 +806,7 @@
   {
     "id": 68,
     "nombre": "San Francisco",
-    "descripcion": "Zumos tropicales y granadina, sin alcohol",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -674,7 +818,7 @@
   {
     "id": 69,
     "nombre": "Cosmopolitan",
-    "descripcion": "Vodka, Cointreau, lima y arÃ¡ndanos",
+    "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
@@ -686,7 +830,7 @@
   {
     "id": 70,
     "nombre": "White Russian",
-    "descripcion": "Vodka, KahlÃºa y nata",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -698,7 +842,7 @@
   {
     "id": 71,
     "nombre": "Tropical",
-    "descripcion": "Combinado tropical de la casa",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -710,7 +854,7 @@
   {
     "id": 72,
     "nombre": "Ron Collins",
-    "descripcion": "Ron, limÃ³n, azÃºcar y soda",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -722,7 +866,7 @@
   {
     "id": 73,
     "nombre": "Tom Collins",
-    "descripcion": "Gin, limÃ³n, azÃºcar y soda",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -734,7 +878,7 @@
   {
     "id": 74,
     "nombre": "Bloody Mary",
-    "descripcion": "Vodka, zumo de tomate y especias",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -746,7 +890,7 @@
   {
     "id": 75,
     "nombre": "Hugo",
-    "descripcion": "Cava, flor de saÃºco, lima y menta",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -758,7 +902,7 @@
   {
     "id": 76,
     "nombre": "Negroni",
-    "descripcion": "Gin, Campari y vermut rojo",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -770,7 +914,7 @@
   {
     "id": 77,
     "nombre": "Screwdriver con zumo de naranja natural",
-    "descripcion": "Vodka y zumo de naranja natural",
+    "descripcion": "",
     "precio": 12,
     "moneda": "€",
     "imagen": "",
@@ -782,7 +926,7 @@
   {
     "id": 78,
     "nombre": "Aperol Spritz",
-    "descripcion": "Aperol, cava y naranja",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -794,7 +938,7 @@
   {
     "id": 79,
     "nombre": "Limoncello Spritz",
-    "descripcion": "Limoncello, cava y limÃ³n",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -806,7 +950,7 @@
   {
     "id": 80,
     "nombre": "Martini Spritz",
-    "descripcion": "Martini, cava y naranja",
+    "descripcion": "",
     "precio": 10,
     "moneda": "€",
     "imagen": "",
@@ -818,7 +962,7 @@
   {
     "id": 81,
     "nombre": "San Francisco sin alcohol",
-    "descripcion": "Zumos tropicales y granadina",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
@@ -830,7 +974,7 @@
   {
     "id": 82,
     "nombre": "Mojito sin alcohol",
-    "descripcion": "Lima, hierbabuena, azÃºcar y soda",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
@@ -842,7 +986,7 @@
   {
     "id": 83,
     "nombre": "Mojito de fruta sin alcohol",
-    "descripcion": "Lima, hierbabuena, fruta y soda",
+    "descripcion": "",
     "precio": 9,
     "moneda": "€",
     "imagen": "",
@@ -854,7 +998,7 @@
   {
     "id": 84,
     "nombre": "Caipirinha sin alcohol",
-    "descripcion": "Lima, azÃºcar y soda",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
@@ -865,8 +1009,8 @@
   },
   {
     "id": 85,
-    "nombre": "DaiquirÃ­ sin alcohol",
-    "descripcion": "Lima, azÃºcar y fruta",
+    "nombre": "Daiquirí sin alcohol",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
@@ -877,8 +1021,8 @@
   },
   {
     "id": 86,
-    "nombre": "DaiquirÃ­ de fruta sin alcohol",
-    "descripcion": "Lima, fruta natural y azÃºcar",
+    "nombre": "Daiquirí de fruta sin alcohol",
+    "descripcion": "",
     "precio": 9,
     "moneda": "€",
     "imagen": "",
@@ -889,8 +1033,8 @@
   },
   {
     "id": 87,
-    "nombre": "PiÃ±a colada sin alcohol",
-    "descripcion": "Crema de coco, piÃ±a y zumos tropicales",
+    "nombre": "Piña colada sin alcohol",
+    "descripcion": "",
     "precio": 9,
     "moneda": "€",
     "imagen": "",
@@ -1070,7 +1214,7 @@
   {
     "id": 102,
     "nombre": "Xoriguer",
-    "descripcion": "Gin menorquÃ­n",
+    "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
     "imagen": "",
@@ -1093,7 +1237,7 @@
   },
   {
     "id": 104,
-    "nombre": "Santiago de Cuba 11 aÃ±os",
+    "nombre": "Santiago de Cuba 11 años",
     "descripcion": "",
     "precio": 16,
     "moneda": "€",
@@ -1105,7 +1249,7 @@
   },
   {
     "id": 105,
-    "nombre": "Santiago de Cuba 8 aÃ±os",
+    "nombre": "Santiago de Cuba 8 años",
     "descripcion": "",
     "precio": 12,
     "moneda": "€",
@@ -1117,7 +1261,7 @@
   },
   {
     "id": 106,
-    "nombre": "Habana Club SelecciÃ³n de Maestros",
+    "nombre": "Habana Club Selección de Maestros",
     "descripcion": "",
     "precio": 12,
     "moneda": "€",
@@ -1129,7 +1273,7 @@
   },
   {
     "id": 107,
-    "nombre": "Habana Club 7 aÃ±os",
+    "nombre": "Habana Club 7 años",
     "descripcion": "",
     "precio": 10,
     "moneda": "€",
@@ -1141,7 +1285,7 @@
   },
   {
     "id": 108,
-    "nombre": "Matusalem 23 aÃ±os",
+    "nombre": "Matusalem 23 años",
     "descripcion": "",
     "precio": 16,
     "moneda": "€",
@@ -1153,7 +1297,7 @@
   },
   {
     "id": 109,
-    "nombre": "Matusalem 15 aÃ±os",
+    "nombre": "Matusalem 15 años",
     "descripcion": "",
     "precio": 14,
     "moneda": "€",
@@ -1165,7 +1309,7 @@
   },
   {
     "id": 110,
-    "nombre": "Matusalem 7 aÃ±os",
+    "nombre": "Matusalem 7 años",
     "descripcion": "",
     "precio": 10,
     "moneda": "€",
@@ -1189,7 +1333,7 @@
   },
   {
     "id": 112,
-    "nombre": "Zacapa 23 aÃ±os",
+    "nombre": "Zacapa 23 años",
     "descripcion": "",
     "precio": 18,
     "moneda": "€",
@@ -1225,7 +1369,7 @@
   },
   {
     "id": 115,
-    "nombre": "BarcelÃ³ Imperial",
+    "nombre": "Barceló Imperial",
     "descripcion": "",
     "precio": 12,
     "moneda": "€",
@@ -1249,7 +1393,7 @@
   },
   {
     "id": 117,
-    "nombre": "Ron Abuelo 7 aÃ±os",
+    "nombre": "Ron Abuelo 7 años",
     "descripcion": "",
     "precio": 10,
     "moneda": "€",
@@ -1261,7 +1405,7 @@
   },
   {
     "id": 118,
-    "nombre": "Ron DiplomÃ¡tico",
+    "nombre": "Ron Diplomático",
     "descripcion": "",
     "precio": 14,
     "moneda": "€",
@@ -1273,7 +1417,7 @@
   },
   {
     "id": 119,
-    "nombre": "Flor de CaÃ±a 12 aÃ±os",
+    "nombre": "Flor de Caña 12 años",
     "descripcion": "",
     "precio": 12,
     "moneda": "€",
@@ -1285,7 +1429,7 @@
   },
   {
     "id": 120,
-    "nombre": "Santiago de Cuba AÃ±ejo",
+    "nombre": "Santiago de Cuba Añejo",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
@@ -1333,7 +1477,7 @@
   },
   {
     "id": 124,
-    "nombre": "Habana Club 3 aÃ±os",
+    "nombre": "Habana Club 3 años",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
@@ -1369,7 +1513,7 @@
   },
   {
     "id": 127,
-    "nombre": "Flor de CaÃ±a AÃ±ejo",
+    "nombre": "Flor de Caña Añejo",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
@@ -1381,7 +1525,7 @@
   },
   {
     "id": 128,
-    "nombre": "BarcelÃ³ AÃ±ejo",
+    "nombre": "Barceló Añejo",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
@@ -1453,7 +1597,7 @@
   },
   {
     "id": 134,
-    "nombre": "MalibÃº",
+    "nombre": "Malibú",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
@@ -1465,7 +1609,7 @@
   },
   {
     "id": 135,
-    "nombre": "BacardÃ­",
+    "nombre": "Bacardí",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
@@ -1537,7 +1681,7 @@
   },
   {
     "id": 141,
-    "nombre": "Macallan 12 aÃ±os",
+    "nombre": "Macallan 12 años",
     "descripcion": "",
     "precio": 16,
     "moneda": "€",
@@ -1741,7 +1885,7 @@
   },
   {
     "id": 158,
-    "nombre": "KahlÃºa",
+    "nombre": "Kahlúa",
     "descripcion": "",
     "precio": 7,
     "moneda": "€",
@@ -1767,13 +1911,13 @@
     "id": 160,
     "nombre": "Licor 43",
     "descripcion": "",
-    "precio": 9.5,
+    "precio": 7,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "licores",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "licores"
+    "activo": true
   },
   {
     "id": 161,
@@ -1837,7 +1981,7 @@
   },
   {
     "id": 166,
-    "nombre": "JÃ¤germeister",
+    "nombre": "Jägermeister",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
@@ -1885,7 +2029,7 @@
   },
   {
     "id": 170,
-    "nombre": "JosÃ© Cuervo Reposado",
+    "nombre": "José Cuervo Reposado",
     "descripcion": "",
     "precio": 9,
     "moneda": "€",
@@ -1974,7 +2118,7 @@
     "precio": 1.8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafÃ©s",
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -1986,7 +2130,7 @@
     "precio": 2,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafÃ©s",
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -1998,7 +2142,7 @@
     "precio": 2.2,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafÃ©s",
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
     "activo": true
@@ -2007,156 +2151,72 @@
     "id": 180,
     "nombre": "Capuccino",
     "descripcion": "",
-    "precio": 3.5,
+    "precio": 4.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "cafÃ©s"
+    "activo": true
   },
   {
     "id": 181,
     "nombre": "Latte Macchiato",
     "descripcion": "",
-    "precio": 4.5,
+    "precio": 6,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "cafÃ©s"
+    "activo": true
   },
   {
     "id": 182,
     "nombre": "Irish Coffee",
-    "descripcion": "CafÃ©, whisky y nata",
+    "descripcion": "",
     "precio": 8,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafÃ©s",
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 183,
-    "nombre": "Iced CafÃ©",
+    "nombre": "Iced Café",
     "descripcion": "",
     "precio": 7,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafÃ©s",
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 184,
-    "nombre": "CafÃ© con hielo",
+    "nombre": "Café con hielo",
     "descripcion": "",
     "precio": 2,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafÃ©s",
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
     "activo": true
   },
   {
     "id": 185,
-    "nombre": "Infusiones",
-    "descripcion": "Menta poleo, manzanilla y tÃ© negro",
-    "precio": 2,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "cafÃ©s"
-  },
-  {
-    "id": 186,
-    "nombre": "Tónica fever",
+    "nombre": "Infusiones (menta poleo, manzanilla, té negro)",
     "descripcion": "",
-    "precio": 3.5,
+    "precio": 1.8,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "clasificacion": "cafés",
     "recomendado": false,
     "agotado": false,
-    "clasificacion": "refrescos"
-  },
-  {
-    "id": 187,
-    "nombre": "Estrella Damm",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "cervezas"
-  },
-  {
-    "id": 188,
-    "nombre": "Tequila Jose Cuervo reposado",
-    "descripcion": "",
-    "precio": 3.5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "chupitos"
-  },
-  {
-    "id": 189,
-    "nombre": "Chupito vodka",
-    "descripcion": "",
-    "precio": 3.5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "chupitos"
-  },
-  {
-    "id": 190,
-    "nombre": "Chupito whisky",
-    "descripcion": "",
-    "precio": 3.5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "chupitos"
-  },
-  {
-    "id": 191,
-    "nombre": "Chupito ron",
-    "descripcion": "",
-    "precio": 3.5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": ""
-  },
-  {
-    "id": 192,
-    "nombre": "Chupito Ron Premium",
-    "descripcion": "",
-    "precio": 8,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "chupitos"
+    "activo": true
   }
 ]

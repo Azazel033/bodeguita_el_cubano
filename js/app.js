@@ -53,26 +53,27 @@ if (tipo) {
 
   fetch(`data/${tipo}-${lang}.json?_=${Date.now()}`, { cache: 'no-store' })
     .then(r => r.json())
-    .then(data => {
-      if (tipo === "bebidas") {
-        renderMenuBebidas(data, l);
-      } else {
-        renderMenu(data, l, tipo);
-      }
-    })
+    .then(data => renderMenu(data, l, tipo))
     .catch(err => console.error("Error cargando el menú:", err));
 }
 
-// ---- RENDER NORMAL (comidas / postres) ----
+// ---- RENDER UNIFICADO ----
+// Si algún item tiene clasificacion rellena → agrupa con índice visual
+// Si no → lista plana
 function renderMenu(items, l, tipo) {
   const container = document.getElementById("menu-container");
   container.innerHTML = "";
 
-  items
-    .filter(item => item.activo)
-    .forEach(item => {
-      container.appendChild(buildCard(item, l, tipo));
-    });
+  const activos = items.filter(item => item.activo);
+
+  // Detectar si hay subcategorías
+  const tieneSubcats = activos.some(item => item.clasificacion && item.clasificacion.trim() !== "");
+
+  if (tieneSubcats) {
+    renderConSubcategorias(activos, l, tipo, container);
+  } else {
+    renderPlano(activos, l, tipo, container);
+  }
 
   // Delegar clicks en imágenes
   container.addEventListener("click", e => {
@@ -81,20 +82,23 @@ function renderMenu(items, l, tipo) {
   });
 }
 
-// ---- RENDER BEBIDAS CON SUBCATEGORÍAS ----
-function renderMenuBebidas(items, l) {
-  const container = document.getElementById("menu-container");
-  container.innerHTML = "";
+// ---- RENDER PLANO ----
+function renderPlano(activos, l, tipo, container) {
+  activos.forEach(item => container.appendChild(buildCard(item, l, tipo)));
+}
 
-  const activos = items.filter(item => item.activo);
-
-  // Obtener subcategorías en el orden en que aparecen en el JSON (sin duplicados)
+// ---- RENDER CON SUBCATEGORÍAS ----
+function renderConSubcategorias(activos, l, tipo, container) {
+  // Subcategorías en el orden en que aparecen en el JSON (sin duplicados)
   const subcats = [];
   activos.forEach(item => {
     if (item.clasificacion && !subcats.includes(item.clasificacion)) {
       subcats.push(item.clasificacion);
     }
   });
+
+  // Items sin clasificación van al final como grupo "sin categoría"
+  const sinCat = activos.filter(item => !item.clasificacion || item.clasificacion.trim() === "");
 
   // --- ÍNDICE VISUAL ---
   const indexDiv = document.createElement("div");
@@ -107,22 +111,18 @@ function renderMenuBebidas(items, l) {
     anchor.addEventListener("click", e => {
       e.preventDefault();
       const target = document.getElementById(`seccion-${slugify(cat)}`);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     const img = document.createElement("img");
-    img.src = `assets/bebidas/clasificacion/${cat}.png`;
+    img.src = `assets/${tipo}/clasificacion/${cat}.png`;
     img.alt = cat;
     img.onerror = () => {
-      // Si no existe la imagen, mostrar texto como fallback
       img.style.display = "none";
       const span = document.createElement("span");
       span.textContent = cat;
       anchor.appendChild(span);
     };
-
     anchor.appendChild(img);
     indexDiv.appendChild(anchor);
   });
@@ -134,13 +134,12 @@ function renderMenuBebidas(items, l) {
     const itemsDeCat = activos.filter(item => item.clasificacion === cat);
     if (itemsDeCat.length === 0) return;
 
-    // Imagen cabecera de sección
     const seccion = document.createElement("div");
     seccion.className = "bebidas-seccion";
     seccion.id = `seccion-${slugify(cat)}`;
 
     const headerImg = document.createElement("img");
-    headerImg.src = `assets/bebidas/clasificacion/${cat}.png`;
+    headerImg.src = `assets/${tipo}/clasificacion/${cat}.png`;
     headerImg.alt = cat;
     headerImg.className = "bebidas-seccion-header";
     headerImg.onerror = () => {
@@ -152,22 +151,21 @@ function renderMenuBebidas(items, l) {
     };
     seccion.appendChild(headerImg);
 
-    // Tarjetas de esa subcategoría
     const cardsDiv = document.createElement("div");
     cardsDiv.className = "bebidas-seccion-cards";
-    itemsDeCat.forEach(item => {
-      cardsDiv.appendChild(buildCard(item, l, "bebidas"));
-    });
+    itemsDeCat.forEach(item => cardsDiv.appendChild(buildCard(item, l, tipo)));
     seccion.appendChild(cardsDiv);
 
     container.appendChild(seccion);
   });
 
-  // Delegar clicks en imágenes
-  container.addEventListener("click", e => {
-    const img = e.target.closest(".menu-image img");
-    if (img) openLightbox(img.dataset.src, img.dataset.nombre);
-  });
+  // Items sin clasificación al final
+  if (sinCat.length > 0) {
+    const seccion = document.createElement("div");
+    seccion.className = "bebidas-seccion";
+    sinCat.forEach(item => seccion.appendChild(buildCard(item, l, tipo)));
+    container.appendChild(seccion);
+  }
 }
 
 // ---- CONSTRUIR TARJETA ----
@@ -189,7 +187,6 @@ function buildCard(item, l, tipo) {
     </div>
   `;
 
-  // Añadir imagen solo si existe en el JSON; si falla al cargar, se elimina silenciosamente
   if (item.imagen && item.imagen.trim() !== "") {
     const imgWrapper = document.createElement("div");
     imgWrapper.className = "menu-image";
@@ -213,7 +210,7 @@ function buildCard(item, l, tipo) {
 function slugify(str) {
   return str
     .toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quitar tildes
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/\s+/g, "-")
     .replace(/[^a-z0-9-]/g, "");
 }
