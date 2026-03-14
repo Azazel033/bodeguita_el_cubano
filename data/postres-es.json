@@ -11,10 +11,10 @@
     "activo": true
   },
   {
-    "id": 1,
-    "nombre": "Helado",
-    "descripcion": "Helado artesanal de la casa",
-    "precio": 3,
+    "id": 3,
+    "nombre": "Copa Lolita",
+    "descripcion": "Postre especial de la casa",
+    "precio": 6,
     "moneda": "€",
     "imagen": "",
     "recomendado": false,
@@ -22,10 +22,10 @@
     "activo": true
   },
   {
-    "id": 3,
-    "nombre": "Copa Lolita",
-    "descripcion": "Postre especial de la casa",
-    "precio": 6,
+    "id": 1,
+    "nombre": "Helado",
+    "descripcion": "Helado artesanal de la casa",
+    "precio": 3,
     "moneda": "€",
     "imagen": "",
     "recomendado": false,
