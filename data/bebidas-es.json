@@ -3,13 +3,13 @@
     "id": 1,
     "nombre": "Zumo natural de naranja",
     "descripcion": "",
-    "precio": 4,
+    "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zumos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zumos"
   },
   {
     "id": 2,
