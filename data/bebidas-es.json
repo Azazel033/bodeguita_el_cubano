@@ -126,10 +126,10 @@
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "energéticos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "energéticos"
   },
   {
     "id": 12,
