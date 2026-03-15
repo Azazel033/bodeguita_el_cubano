@@ -591,13 +591,13 @@
     "id": 50,
     "nombre": "Licor brownie de chocolate",
     "descripcion": "",
-    "precio": 3.5,
+    "precio": 4,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "chupitos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "chupitos"
   },
   {
     "id": 51,
