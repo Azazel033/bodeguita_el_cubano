@@ -1,9 +1,9 @@
 [
   {
-    "id": 2,
-    "nombre": "Flan",
-    "descripcion": "Flan casero de la abuela",
-    "precio": 4,
+    "id": 1,
+    "nombre": "Helado",
+    "descripcion": "Helado artesanal de la casa",
+    "precio": 3,
     "moneda": "€",
     "imagen": "",
     "recomendado": false,
@@ -11,10 +11,10 @@
     "activo": true
   },
   {
-    "id": 1,
-    "nombre": "Helado",
-    "descripcion": "Helado artesanal de la casa",
-    "precio": 3,
+    "id": 2,
+    "nombre": "Flan",
+    "descripcion": "Flan casero de la abuela",
+    "precio": 4,
     "moneda": "€",
     "imagen": "",
     "recomendado": false,
