@@ -85,15 +85,15 @@
   },
   {
     "id": 8,
-    "nombre": "Cocacola, Cola Zero, Fanta naranja/limón, Sprite",
+    "nombre": "Cocacola, Cola Zero, Fanta naranja/limón, Sprite, Kas limón",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "refrescos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "refrescos"
   },
   {
     "id": 9,
