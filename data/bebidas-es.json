@@ -1860,6 +1860,18 @@
     "activo": true
   },
   {
+    "id": 186,
+    "nombre": "Limonada Natural",
+    "descripcion": "",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "zumos"
+  },
+  {
     "id": 156,
     "nombre": "Sambuca (Molinari)",
     "descripcion": "",
@@ -1918,18 +1930,6 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "licores"
-  },
-  {
-    "id": 186,
-    "nombre": "Limonada Natural",
-    "descripcion": "",
-    "precio": 5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "zumos"
   },
   {
     "id": 161,
