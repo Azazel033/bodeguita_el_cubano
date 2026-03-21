@@ -36,6 +36,18 @@
     "clasificacion": "cocina cubana"
   },
   {
+    "id": 25,
+    "nombre": "Lomo ahumado con viandas y ensalada",
+    "descripcion": "",
+    "precio": 14,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocina cubana"
+  },
+  {
     "id": 3,
     "nombre": "Tostones",
     "descripcion": "",
@@ -286,18 +298,6 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
-  },
-  {
-    "id": 25,
-    "nombre": "Lomo ahumado con viandas y ensalada",
-    "descripcion": "",
-    "precio": 14,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "cocina cubana"
   },
   {
     "id": 26,
