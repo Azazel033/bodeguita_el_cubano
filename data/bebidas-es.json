@@ -2187,13 +2187,13 @@
     "id": 180,
     "nombre": "Capuccino",
     "descripcion": "",
-    "precio": 4.5,
+    "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafés",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cafés"
   },
   {
     "id": 181,
