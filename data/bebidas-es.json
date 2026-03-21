@@ -349,15 +349,15 @@
   },
   {
     "id": 29,
-    "nombre": "Heineken 1/5",
+    "nombre": "Heineken",
     "descripcion": "",
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cervezas",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cervezas"
   },
   {
     "id": 30,
