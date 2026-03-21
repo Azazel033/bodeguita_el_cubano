@@ -49,15 +49,15 @@
   },
   {
     "id": 4,
-    "nombre": "Naranja",
+    "nombre": "Pago de Naranja",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zumos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zumos"
   },
   {
     "id": 5,
