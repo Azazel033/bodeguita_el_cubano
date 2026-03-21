@@ -2254,5 +2254,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cafés"
+  },
+  {
+    "id": 189,
+    "nombre": "Americano",
+    "descripcion": "",
+    "precio": 2.2,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cafés"
   }
 ]
