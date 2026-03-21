@@ -13,13 +13,14 @@
   {
     "id": 1,
     "nombre": "Helado",
-    "descripcion": "Helado artesanal de la casa",
-    "precio": 3,
+    "descripcion": "Helado vainilla, chocolate, limón",
+    "precio": 4,
     "moneda": "€",
     "imagen": "",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": ""
   },
   {
     "id": 3,
