@@ -2172,6 +2172,18 @@
     "activo": true
   },
   {
+    "id": 186,
+    "nombre": "Limonada Natural",
+    "descripcion": "",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "zumos"
+  },
+  {
     "id": 182,
     "nombre": "Irish Coffee",
     "descripcion": "",
@@ -2218,18 +2230,6 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
-  },
-  {
-    "id": 186,
-    "nombre": "Limonada Natural",
-    "descripcion": "",
-    "precio": 5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "zumos"
   },
   {
     "id": 187,
