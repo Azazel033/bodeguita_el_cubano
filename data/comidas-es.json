@@ -24,6 +24,18 @@
     "activo": true
   },
   {
+    "id": 24,
+    "nombre": "Cocktail de gambas",
+    "descripcion": "",
+    "precio": 10.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocina cubana"
+  },
+  {
     "id": 3,
     "nombre": "Tostones",
     "descripcion": "",
@@ -274,18 +286,6 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
-  },
-  {
-    "id": 24,
-    "nombre": "Cocktail de gambas",
-    "descripcion": "",
-    "precio": 10.5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "cocina cubana"
   },
   {
     "id": 25,
