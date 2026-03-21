@@ -25,15 +25,15 @@
   },
   {
     "id": 2,
-    "nombre": "Melocotón",
+    "nombre": "Pago de Melocotón",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zumos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zumos"
   },
   {
     "id": 3,
