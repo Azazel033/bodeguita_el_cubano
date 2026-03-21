@@ -361,15 +361,15 @@
   },
   {
     "id": 30,
-    "nombre": "Estrella Galicia 1/5",
+    "nombre": "Estrella Galicia",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cervezas",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cervezas"
   },
   {
     "id": 31,
