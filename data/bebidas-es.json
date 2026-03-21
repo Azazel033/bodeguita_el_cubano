@@ -2199,13 +2199,13 @@
     "id": 181,
     "nombre": "Latte Macchiato",
     "descripcion": "",
-    "precio": 6,
+    "precio": 4.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafés",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cafés"
   },
   {
     "id": 182,
