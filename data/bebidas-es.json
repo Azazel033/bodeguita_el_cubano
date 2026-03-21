@@ -2247,12 +2247,12 @@
     "id": 185,
     "nombre": "Infusiones (menta poleo, manzanilla, té negro)",
     "descripcion": "",
-    "precio": 1.8,
+    "precio": 2,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cafés",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cafés"
   }
 ]
