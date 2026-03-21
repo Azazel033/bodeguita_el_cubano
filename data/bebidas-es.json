@@ -61,15 +61,15 @@
   },
   {
     "id": 5,
-    "nombre": "Tomate",
+    "nombre": "Pago de Tomate",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zumos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zumos"
   },
   {
     "id": 6,
