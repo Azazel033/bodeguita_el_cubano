@@ -26,11 +26,12 @@
     "id": 3,
     "nombre": "Copa Lolita",
     "descripcion": "Postre especial de la casa",
-    "precio": 6,
+    "precio": 5.5,
     "moneda": "€",
     "imagen": "",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": ""
   }
 ]
