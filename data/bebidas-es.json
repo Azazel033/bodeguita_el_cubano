@@ -37,15 +37,15 @@
   },
   {
     "id": 3,
-    "nombre": "Piña",
+    "nombre": "Pago de Piña",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zumos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zumos"
   },
   {
     "id": 4,
