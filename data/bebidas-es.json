@@ -396,18 +396,6 @@
     "clasificacion": "cervezas"
   },
   {
-    "id": 187,
-    "nombre": "Estrella Damm",
-    "descripcion": "",
-    "precio": 3,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "cervezas"
-  },
-  {
     "id": 33,
     "nombre": "Heineken 0,0",
     "descripcion": "",
@@ -418,6 +406,18 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
+  },
+  {
+    "id": 187,
+    "nombre": "Estrella Damm",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cervezas"
   },
   {
     "id": 34,
