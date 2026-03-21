@@ -289,15 +289,15 @@
   },
   {
     "id": 25,
-    "nombre": "Chuleta de Sajonia con viandas y ensalada",
+    "nombre": "Lomo ahumado con viandas y ensalada",
     "descripcion": "",
     "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "principales",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cocina cubana"
   },
   {
     "id": 26,
