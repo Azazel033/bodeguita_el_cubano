@@ -282,10 +282,10 @@
     "precio": 10.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "para compartir",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cocina cubana"
   },
   {
     "id": 25,
