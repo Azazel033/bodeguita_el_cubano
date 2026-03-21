@@ -1789,15 +1789,15 @@
   },
   {
     "id": 148,
-    "nombre": "Johnnie Walker White Label",
+    "nombre": "Dewars White Label",
     "descripcion": "",
     "precio": 9.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "wiskys",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "wiskys"
   },
   {
     "id": 149,
