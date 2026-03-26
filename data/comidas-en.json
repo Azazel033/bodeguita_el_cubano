@@ -36,6 +36,18 @@
     "clasificacion": "cuban cuisine"
   },
   {
+    "id": 25,
+    "nombre": "Saxony chop with viandas and salad",
+    "descripcion": "",
+    "precio": 14,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "mains",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
     "id": 3,
     "nombre": "Tostones",
     "descripcion": "",
@@ -283,18 +295,6 @@
     "moneda": "€",
     "imagen": "",
     "clasificacion": "to share",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 25,
-    "nombre": "Saxony chop with viandas and salad",
-    "descripcion": "",
-    "precio": 14,
-    "moneda": "€",
-    "imagen": "",
-    "clasificacion": "mains",
     "recomendado": false,
     "agotado": false,
     "activo": true
