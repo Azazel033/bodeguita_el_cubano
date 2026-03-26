@@ -3,13 +3,13 @@
     "id": 1,
     "nombre": "Fresh orange juice",
     "descripcion": "",
-    "precio": 4,
+    "precio": 5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "juices",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "juices"
   },
   {
     "id": 2,
