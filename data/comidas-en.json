@@ -24,6 +24,18 @@
     "activo": true
   },
   {
+    "id": 24,
+    "nombre": "Prawn cocktail",
+    "descripcion": "",
+    "precio": 10.5,
+    "moneda": "€",
+    "imagen": "",
+    "clasificacion": "to share",
+    "recomendado": false,
+    "agotado": false,
+    "activo": true
+  },
+  {
     "id": 3,
     "nombre": "Tostones",
     "descripcion": "",
@@ -268,18 +280,6 @@
     "nombre": "Vegetable salad",
     "descripcion": "",
     "precio": 8,
-    "moneda": "€",
-    "imagen": "",
-    "clasificacion": "to share",
-    "recomendado": false,
-    "agotado": false,
-    "activo": true
-  },
-  {
-    "id": 24,
-    "nombre": "Prawn cocktail",
-    "descripcion": "",
-    "precio": 10.5,
     "moneda": "€",
     "imagen": "",
     "clasificacion": "to share",
