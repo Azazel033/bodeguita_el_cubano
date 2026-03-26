@@ -61,15 +61,15 @@
   },
   {
     "id": 5,
-    "nombre": "Fried pork",
+    "nombre": "Fried pork (Masa Frita)",
     "descripcion": "",
     "precio": 11,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cuban cuisine",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cuban cuisine"
   },
   {
     "id": 6,
