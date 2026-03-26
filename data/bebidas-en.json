@@ -2230,5 +2230,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "coffees"
+  },
+  {
+    "id": 187,
+    "nombre": "Fresh lemonade",
+    "descripcion": "",
+    "precio": 5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": ""
   }
 ]
