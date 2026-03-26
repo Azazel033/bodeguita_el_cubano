@@ -2151,13 +2151,13 @@
     "id": 180,
     "nombre": "Cappuccino",
     "descripcion": "",
-    "precio": 4.5,
+    "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "coffees",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "coffees"
   },
   {
     "id": 181,
