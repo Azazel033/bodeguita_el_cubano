@@ -42,10 +42,10 @@
     "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "mains",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cuban cuisine"
   },
   {
     "id": 3,
