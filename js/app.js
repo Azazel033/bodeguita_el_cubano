@@ -3,9 +3,9 @@ const tipo = params.get("tipo");
 const lang = params.get("lang") || localStorage.getItem("lang") || "es";
 
 const labels = {
-  es: { recomendado: "RECOMENDADO", agotado: "AGOTADO",     titulos: { bebidas: "Bebidas Tropicales",   comidas: "Especialidades Cubanas",    postres: "Postres de la Casa" } },
-  en: { recomendado: "RECOMMENDED", agotado: "SOLD OUT",    titulos: { bebidas: "Tropical Drinks",      comidas: "Cuban Specialties",         postres: "House Desserts"     } },
-  de: { recomendado: "EMPFOHLEN",   agotado: "AUSVERKAUFT", titulos: { bebidas: "Tropische Getränke",   comidas: "Kubanische Spezialitäten",  postres: "Hausdesserts"       } }
+  es: { recomendado: "RECOMENDADO", agotado: "AGOTADO",     infoAlimentaria: "Información alimentaria", titulos: { bebidas: "Bebidas Tropicales",   comidas: "Especialidades Cubanas",    postres: "Postres de la Casa" } },
+  en: { recomendado: "RECOMMENDED", agotado: "SOLD OUT",    infoAlimentaria: "Food information",        titulos: { bebidas: "Tropical Drinks",      comidas: "Cuban Specialties",         postres: "House Desserts"     } },
+  de: { recomendado: "EMPFOHLEN",   agotado: "AUSVERKAUFT", infoAlimentaria: "Lebensmittel information", titulos: { bebidas: "Tropische Getränke",   comidas: "Kubanische Spezialitäten",  postres: "Hausdesserts"       } }
 };
 
 const placeholderEmoji = { bebidas: "🍹", comidas: "🍽️", postres: "🍰" };
@@ -46,6 +46,9 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbo
 if (tipo) {
   const l = labels[lang] || labels.es;
   document.getElementById("titulo-categoria").textContent = l.titulos[tipo] || tipo;
+
+  const btnInfo = document.getElementById("btn-info-alimentaria");
+  if (btnInfo) btnInfo.textContent = l.infoAlimentaria;
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);

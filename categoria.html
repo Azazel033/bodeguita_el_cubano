@@ -27,17 +27,14 @@
 
       <nav class="cat-nav">
         <a class="category-card" id="nav-bebidas" href="categoria.html?tipo=bebidas">
-          <!-- <img src="assets/icono bebidas.png" alt="Bebidas"> -->
           <img class="texto-cat" id="nav-texto-bebidas" src="assets/texto bebida-es.png" alt="Bebidas"
             style="width: auto; height: auto;">
         </a>
         <a class="category-card" id="nav-comidas" href="categoria.html?tipo=comidas">
-          <!-- <img src="assets/icono comida.png" alt="Comidas"> -->
           <img class="texto-cat" id="nav-texto-comidas" src="assets/texto comida-es.png" alt="Comidas"
             style="width: auto; height: auto;">
         </a>
         <a class="category-card" id="nav-postres" href="categoria.html?tipo=postres">
-          <!-- <img src="assets/icono postre.png" alt="Comidas"> -->
           <img class="texto-cat" id="nav-texto-postres" src="assets/texto postre-es.png" alt="Postres"
             style="width: auto; height: auto;">
         </a>
@@ -48,6 +45,9 @@
   <main class="main-with-header">
     <img id="titulo-categoria" src="" alt="" style="width:50%; height:auto; margin: 10px auto 0; display:block;">
     <div id="menu-container"></div>
+
+    <button class="lang-btn" id="btn-info-alimentaria" style="margin: 24px auto 8px; display: none;"></button>
+
     <div class="social-links">
       <a href="tel:689253123"><img src="assets/icono telef.png" alt="Teléfono"></a>
       <a href="https://es-es.facebook.com/BodeguitaElCubano"><img src="assets/icono face.png" alt="Facebook"></a>
@@ -59,8 +59,14 @@
 07638 Ses Salines, Islas Baleares, Spain
   </pre>
       </a>
-      </div>
+    </center>
   </main>
+
+  <!-- Lightbox info alimentaria -->
+  <div class="lightbox-overlay" id="lightbox-info">
+    <span class="lightbox-close" id="close-info">&#x2715;</span>
+    <img src="assets/información alimentaria.png" alt="Información alimentaria">
+  </div>
 
   <script src="js/app.js"></script>
   <script>
@@ -68,6 +74,7 @@
     const currentTipo = new URLSearchParams(window.location.search).get("tipo");
 
     document.querySelectorAll(".lang-btn").forEach(btn => {
+      if (!btn.dataset.lang) return; // excluir el botón de info alimentaria
       btn.classList.toggle("active", btn.dataset.lang === savedLang);
       btn.addEventListener("click", () => {
         const params = new URLSearchParams(window.location.search);
@@ -85,7 +92,6 @@
       document.getElementById("nav-comidas").href = `categoria.html?tipo=comidas&lang=${lang}`;
       document.getElementById("nav-postres").href = `categoria.html?tipo=postres&lang=${lang}`;
 
-      // Sincronizar imagen del título con la categoría activa
       if (currentTipo) {
         const navTexto = document.getElementById(`nav-texto-${currentTipo}`);
         const tituloImg = document.getElementById("titulo-categoria");
@@ -99,20 +105,36 @@
     }
 
     updateCatNav(savedLang);
-  </script>
 
+    // Mostrar botón info solo en comidas y postres
+    const btnInfo = document.getElementById("btn-info-alimentaria");
+    if (currentTipo === "comidas" || currentTipo === "postres") {
+      btnInfo.style.display = "block";
+      btnInfo.classList.add("active");
+    }
+    const lightboxInfo = document.getElementById("lightbox-info");
+    btnInfo.addEventListener("click", () => {
+      lightboxInfo.classList.add("active");
+    });
+    document.getElementById("close-info").addEventListener("click", e => {
+      e.stopPropagation();
+      lightboxInfo.classList.remove("active");
+    });
+    lightboxInfo.addEventListener("click", () => lightboxInfo.classList.remove("active"));
+    lightboxInfo.querySelector("img").addEventListener("click", e => e.stopPropagation());
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") lightboxInfo.classList.remove("active");
+    });
 
-  <script>
-    // Mide el header y actualiza --header-h para que el main quede 5px por debajo
+    // Mide el header
     function updateHeaderHeight() {
       const h = document.querySelector('.site-header');
       if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
     }
     updateHeaderHeight();
     window.addEventListener('resize', updateHeaderHeight);
-    // Re-medir tras cargar imágenes del header (por si cambian el alto)
     window.addEventListener('load', updateHeaderHeight);
   </script>
-</body>
 
+</body>
 </html>
