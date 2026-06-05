@@ -348,18 +348,6 @@
     "activo": true
   },
   {
-    "id": 37,
-    "nombre": "lomo ahumado con guarnicion",
-    "descripcion": "",
-    "precio": 20,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "evento 5 Junio"
-  },
-  {
     "id": 38,
     "nombre": "Cerdo Mechado con Guarnici{on",
     "descripcion": "",
