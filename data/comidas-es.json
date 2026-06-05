@@ -442,5 +442,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "evento 5 Junio"
+  },
+  {
+    "id": 38,
+    "nombre": "Cerdo Mechado con Guarnici{on",
+    "descripcion": "",
+    "precio": 18,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "evento 5 Junio"
   }
 ]
