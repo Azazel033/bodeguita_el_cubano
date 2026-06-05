@@ -358,5 +358,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "evento 5 Junio"
+  },
+  {
+    "id": 31,
+    "nombre": "Pan amb oli jamon y queso",
+    "descripcion": "",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "evento 5 Junio"
   }
 ]
