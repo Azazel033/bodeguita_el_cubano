@@ -394,5 +394,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "evento 5 Junio"
+  },
+  {
+    "id": 34,
+    "nombre": "Yuca frita",
+    "descripcion": "",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "evento 5 Junio"
   }
 ]
