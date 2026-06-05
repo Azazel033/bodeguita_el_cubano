@@ -348,18 +348,6 @@
     "activo": true
   },
   {
-    "id": 35,
-    "nombre": "Tamales",
-    "descripcion": "",
-    "precio": 7,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "evento 5 Junio"
-  },
-  {
     "id": 36,
     "nombre": "Patatas Bravas",
     "descripcion": "",
