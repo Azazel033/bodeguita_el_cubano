@@ -370,5 +370,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "evento 5 Junio"
+  },
+  {
+    "id": 32,
+    "nombre": "Croquetas de jamon",
+    "descripcion": "",
+    "precio": 8,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "evento 5 Junio"
   }
 ]
