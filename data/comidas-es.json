@@ -346,17 +346,5 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
-  },
-  {
-    "id": 42,
-    "nombre": "Ropa vieja con Guarnición",
-    "descripcion": "",
-    "precio": 18,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "evento 5 Junio"
   }
 ]
