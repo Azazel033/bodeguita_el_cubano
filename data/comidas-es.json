@@ -348,18 +348,6 @@
     "activo": true
   },
   {
-    "id": 36,
-    "nombre": "Patatas Bravas",
-    "descripcion": "",
-    "precio": 5.5,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "evento 5 Junio"
-  },
-  {
     "id": 37,
     "nombre": "lomo ahumado con guarnicion",
     "descripcion": "",
