@@ -348,18 +348,6 @@
     "activo": true
   },
   {
-    "id": 39,
-    "nombre": "Pechuga de pollo a las finas hierbas con guarnicion",
-    "descripcion": "",
-    "precio": 18,
-    "moneda": "€",
-    "imagen": "",
-    "activo": true,
-    "recomendado": false,
-    "agotado": false,
-    "clasificacion": "evento 5 Junio"
-  },
-  {
     "id": 40,
     "nombre": "Enchilado de gambas con Guarnicion",
     "descripcion": "",
