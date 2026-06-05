@@ -346,5 +346,17 @@
     "recomendado": false,
     "agotado": false,
     "activo": true
+  },
+  {
+    "id": 30,
+    "nombre": "pan y alioli",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "evento 5 Junio"
   }
 ]
