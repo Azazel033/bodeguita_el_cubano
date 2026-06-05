@@ -478,5 +478,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "evento 5 Junio"
+  },
+  {
+    "id": 41,
+    "nombre": "Calamares guisados con guarnicion",
+    "descripcion": "",
+    "precio": 22,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "evento 5 Junio"
   }
 ]
