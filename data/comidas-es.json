@@ -135,13 +135,13 @@
     "id": 10,
     "nombre": "Enchilado de gambas",
     "descripcion": "",
-    "precio": 16,
+    "precio": 18,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cocina cubana",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cocina cubana"
   },
   {
     "id": 11,
