@@ -219,13 +219,13 @@
     "id": 17,
     "nombre": "Croquetas de jamón",
     "descripcion": "",
-    "precio": 8,
+    "precio": 8.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "para compartir",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "para compartir"
   },
   {
     "id": 18,
