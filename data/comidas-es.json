@@ -51,13 +51,13 @@
     "id": 3,
     "nombre": "Tostones",
     "descripcion": "",
-    "precio": 6,
+    "precio": 6.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cocina cubana",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cocina cubana"
   },
   {
     "id": 4,
