@@ -99,13 +99,13 @@
     "id": 7,
     "nombre": "Ropa vieja",
     "descripcion": "",
-    "precio": 11,
+    "precio": 13.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cocina cubana",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cocina cubana"
   },
   {
     "id": 8,
