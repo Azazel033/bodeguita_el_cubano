@@ -183,13 +183,13 @@
     "id": 14,
     "nombre": "Pa amb oli jamón y queso",
     "descripcion": "",
-    "precio": 11.5,
+    "precio": 12,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "para compartir",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "para compartir"
   },
   {
     "id": 15,
