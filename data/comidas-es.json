@@ -123,13 +123,13 @@
     "id": 9,
     "nombre": "Pa amb oli de ropa vieja",
     "descripcion": "",
-    "precio": 11,
+    "precio": 12.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cocina cubana",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cocina cubana"
   },
   {
     "id": 10,
