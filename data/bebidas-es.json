@@ -261,7 +261,7 @@
     "clasificacion": "batidos",
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "activo": false
   },
   {
     "id": 22,
