@@ -2151,7 +2151,7 @@
     "id": 177,
     "nombre": "Espresso",
     "descripcion": "",
-    "precio": 2,
+    "precio": 1.8,
     "moneda": "€",
     "imagen": "",
     "activo": true,
