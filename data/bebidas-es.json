@@ -2410,5 +2410,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cocktails"
+  },
+  {
+    "id": 202,
+    "nombre": "Granadina",
+    "descripcion": "",
+    "precio": 6,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "licores"
   }
 ]
