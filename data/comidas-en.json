@@ -219,13 +219,13 @@
     "id": 17,
     "nombre": "Ham croquettes",
     "descripcion": "",
-    "precio": 8,
+    "precio": 8.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "to share",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "to share"
   },
   {
     "id": 18,
