@@ -2278,5 +2278,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "refrescos"
+  },
+  {
+    "id": 191,
+    "nombre": "Pago manzana",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "refrescos"
   }
 ]
