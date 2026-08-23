@@ -2470,5 +2470,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "chupitos"
+  },
+  {
+    "id": 207,
+    "nombre": "Chupito premium",
+    "descripcion": "",
+    "precio": 8,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "chupitos"
   }
 ]
