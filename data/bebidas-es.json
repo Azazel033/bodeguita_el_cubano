@@ -2314,5 +2314,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cocktails"
+  },
+  {
+    "id": 194,
+    "nombre": "Daiquiri Green",
+    "descripcion": "",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocktails"
   }
 ]
