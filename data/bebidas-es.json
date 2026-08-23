@@ -2326,5 +2326,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cocktails"
+  },
+  {
+    "id": 195,
+    "nombre": "Mocow mule",
+    "descripcion": "",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocktails"
   }
 ]
