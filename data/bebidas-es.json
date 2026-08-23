@@ -249,7 +249,7 @@
     "clasificacion": "batidos",
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "activo": false
   },
   {
     "id": 21,
@@ -2302,5 +2302,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "zumos"
+  },
+  {
+    "id": 193,
+    "nombre": "Dark and stormy",
+    "descripcion": "",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocktails"
   }
 ]
