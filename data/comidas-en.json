@@ -339,12 +339,12 @@
     "id": 29,
     "nombre": "Vegetarian plate",
     "descripcion": "Fresh vegetables, fried or mojo yuca, tostones",
-    "precio": 15.5,
+    "precio": 18,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "mains",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "mains"
   }
 ]
