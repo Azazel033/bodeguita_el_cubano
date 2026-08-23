@@ -73,15 +73,15 @@
   },
   {
     "id": 6,
-    "nombre": "Agua sin gas Panna",
+    "nombre": "Agua sin gas",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "refrescos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "refrescos"
   },
   {
     "id": 7,
