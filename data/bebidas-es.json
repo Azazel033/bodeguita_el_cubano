@@ -2350,5 +2350,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cocktails"
+  },
+  {
+    "id": 197,
+    "nombre": "Blue Daiquiri",
+    "descripcion": "",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocktails"
   }
 ]
