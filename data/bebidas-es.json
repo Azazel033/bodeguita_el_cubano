@@ -2266,5 +2266,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cafés"
+  },
+  {
+    "id": 190,
+    "nombre": "Tónica schweppes",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "refrescos"
   }
 ]
