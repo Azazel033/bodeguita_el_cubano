@@ -2458,5 +2458,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "chupitos"
+  },
+  {
+    "id": 206,
+    "nombre": "Chupito Baileys",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "chupitos"
   }
 ]
