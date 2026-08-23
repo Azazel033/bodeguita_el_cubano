@@ -2422,5 +2422,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "licores"
+  },
+  {
+    "id": 203,
+    "nombre": "Chupito vodka",
+    "descripcion": "",
+    "precio": 3.5,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "chupitos"
   }
 ]
