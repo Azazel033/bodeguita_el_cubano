@@ -171,13 +171,13 @@
     "id": 13,
     "nombre": "Bread with oil and Mahón cheese",
     "descripcion": "",
-    "precio": 11,
+    "precio": 12,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "to share",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "to share"
   },
   {
     "id": 14,
