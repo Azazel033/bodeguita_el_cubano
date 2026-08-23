@@ -123,13 +123,13 @@
     "id": 9,
     "nombre": "Bread with oil and ropa vieja",
     "descripcion": "",
-    "precio": 11,
+    "precio": 12.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cuban cuisine",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cuban cuisine"
   },
   {
     "id": 10,
