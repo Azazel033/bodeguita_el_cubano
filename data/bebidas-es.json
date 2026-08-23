@@ -126,7 +126,7 @@
     "precio": 3.5,
     "moneda": "€",
     "imagen": "",
-    "activo": true,
+    "activo": false,
     "recomendado": false,
     "agotado": false,
     "clasificacion": "refrescos"
