@@ -87,13 +87,13 @@
     "id": 6,
     "nombre": "Cuban hot dog",
     "descripcion": "",
-    "precio": 13,
+    "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cuban cuisine",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cuban cuisine"
   },
   {
     "id": 7,
