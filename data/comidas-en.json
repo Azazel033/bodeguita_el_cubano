@@ -135,13 +135,13 @@
     "id": 10,
     "nombre": "Prawn enchilado",
     "descripcion": "",
-    "precio": 16,
+    "precio": 18,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "cuban cuisine",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "cuban cuisine"
   },
   {
     "id": 11,
