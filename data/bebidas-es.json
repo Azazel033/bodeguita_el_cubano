@@ -2338,5 +2338,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cocktails"
+  },
+  {
+    "id": 196,
+    "nombre": "Campari spritz",
+    "descripcion": "",
+    "precio": 10,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocktails"
   }
 ]
