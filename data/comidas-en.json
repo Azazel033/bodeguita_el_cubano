@@ -183,13 +183,13 @@
     "id": 14,
     "nombre": "Bread with oil, ham and cheese",
     "descripcion": "",
-    "precio": 11.5,
+    "precio": 12,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "to share",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "to share"
   },
   {
     "id": 15,
