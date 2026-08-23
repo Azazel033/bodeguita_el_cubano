@@ -2290,5 +2290,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "refrescos"
+  },
+  {
+    "id": 192,
+    "nombre": "Pago mango",
+    "descripcion": "",
+    "precio": 3,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "zumos"
   }
 ]
