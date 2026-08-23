@@ -2362,5 +2362,17 @@
     "recomendado": false,
     "agotado": false,
     "clasificacion": "cocktails"
+  },
+  {
+    "id": 198,
+    "nombre": "Blue Hawaii",
+    "descripcion": "",
+    "precio": 12,
+    "moneda": "€",
+    "imagen": "",
+    "activo": true,
+    "recomendado": false,
+    "agotado": false,
+    "clasificacion": "cocktails"
   }
 ]
