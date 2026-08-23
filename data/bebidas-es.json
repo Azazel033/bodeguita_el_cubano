@@ -85,15 +85,15 @@
   },
   {
     "id": 7,
-    "nombre": "Agua con gas Pellegrino",
+    "nombre": "Agua con gas",
     "descripcion": "",
     "precio": 3,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "refrescos",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "refrescos"
   },
   {
     "id": 8,
