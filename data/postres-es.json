@@ -26,7 +26,7 @@
     "id": 3,
     "nombre": "Copa Lolita",
     "descripcion": "Postre especial de la casa",
-    "precio": 5.5,
+    "precio": 6,
     "moneda": "€",
     "imagen": "",
     "activo": true,
