@@ -3,12 +3,13 @@
     "id": 1,
     "nombre": "Ice cream",
     "descripcion": "Homemade artisan ice cream",
-    "precio": 3,
+    "precio": 4,
     "moneda": "€",
     "imagen": "",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": ""
   },
   {
     "id": 2,
