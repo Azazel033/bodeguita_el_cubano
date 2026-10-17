@@ -63,25 +63,25 @@
     "id": 6,
     "nombre": "Kubanischer Hotdog",
     "descripcion": "",
-    "precio": 13,
+    "precio": 14,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "kubanische küche",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "kubanische küche"
   },
   {
     "id": 7,
     "nombre": "Ropa Vieja",
     "descripcion": "",
-    "precio": 11,
+    "precio": 13.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "kubanische küche",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "kubanische küche"
   },
   {
     "id": 8,
