@@ -195,13 +195,13 @@
     "id": 17,
     "nombre": "Schinkenkroketten",
     "descripcion": "",
-    "precio": 8,
+    "precio": 8.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zum teilen",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zum teilen"
   },
   {
     "id": 18,
