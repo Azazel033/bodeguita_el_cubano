@@ -291,13 +291,13 @@
     "id": 25,
     "nombre": "Sachsenkotelett mit Viandas und Salat",
     "descripcion": "",
-    "precio": 14,
+    "precio": 15,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "hauptspeisen",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "hauptspeisen"
   },
   {
     "id": 26,
