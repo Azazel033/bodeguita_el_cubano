@@ -279,13 +279,13 @@
     "id": 24,
     "nombre": "Garnelen-Cocktail",
     "descripcion": "",
-    "precio": 10.5,
+    "precio": 11.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zum teilen",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zum teilen"
   },
   {
     "id": 25,
