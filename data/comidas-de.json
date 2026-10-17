@@ -111,13 +111,13 @@
     "id": 10,
     "nombre": "Garnelen-Enchilado",
     "descripcion": "",
-    "precio": 16,
+    "precio": 18,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "kubanische küche",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "kubanische küche"
   },
   {
     "id": 11,
