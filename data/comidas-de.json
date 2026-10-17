@@ -159,13 +159,13 @@
     "id": 14,
     "nombre": "Brot mit Öl, Schinken und Käse",
     "descripcion": "",
-    "precio": 11.5,
+    "precio": 12,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "zum teilen",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "zum teilen"
   },
   {
     "id": 15,
