@@ -51,13 +51,13 @@
     "id": 5,
     "nombre": "Gebratenes Schweinefleisch",
     "descripcion": "",
-    "precio": 11,
+    "precio": 13.5,
     "moneda": "€",
     "imagen": "",
-    "clasificacion": "kubanische küche",
+    "activo": true,
     "recomendado": false,
     "agotado": false,
-    "activo": true
+    "clasificacion": "kubanische küche"
   },
   {
     "id": 6,
